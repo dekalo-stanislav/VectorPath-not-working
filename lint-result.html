@@ -174,20 +174,18 @@ document.getElementById(id).style.display = 'none';
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
   <header class="mdl-layout__header">
     <div class="mdl-layout__header-row">
-      <span class="mdl-layout-title">Lint Report: 22 warnings</span>
+      <span class="mdl-layout-title">Lint Report: 4 warnings</span>
       <div class="mdl-layout-spacer"></div>
       <nav class="mdl-navigation mdl-layout--large-screen-only">
-Check performed at Tue Dec 28 02:40:56 EET 2021      </nav>
+Check performed at Tue Dec 28 02:35:06 EET 2021      </nav>
     </div>
   </header>
   <div class="mdl-layout__drawer">
     <span class="mdl-layout-title">Issue Types</span>
     <nav class="mdl-navigation">
       <a class="mdl-navigation__link" href="#overview"><i class="material-icons">dashboard</i>Overview</a>
-      <a class="mdl-navigation__link" href="#GradleDependency"><i class="material-icons warning-icon">warning</i>Obsolete Gradle Dependency (2)</a>
       <a class="mdl-navigation__link" href="#GradleDynamicVersion"><i class="material-icons warning-icon">warning</i>Gradle Dynamic Version (1)</a>
       <a class="mdl-navigation__link" href="#AllowBackup"><i class="material-icons warning-icon">warning</i>AllowBackup/FullBackupContent Problems (1)</a>
-      <a class="mdl-navigation__link" href="#VectorPath"><i class="material-icons warning-icon">warning</i>Long vector paths (16)</a>
       <a class="mdl-navigation__link" href="#UnusedResources"><i class="material-icons warning-icon">warning</i>Unused resources (1)</a>
       <a class="mdl-navigation__link" href="#ContentDescription"><i class="material-icons warning-icon">warning</i>Image without <code>contentDescription</code> (1)</a>
     </nav>
@@ -205,9 +203,6 @@ Check performed at Tue Dec 28 02:40:56 EET 2021      </nav>
 <tr><td class="countColumn"></td><td class="categoryColumn"><a href="#Correctness">Correctness</a>
 </td></tr>
 <tr>
-<td class="countColumn">2</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
-<a href="#GradleDependency">GradleDependency</a>: Obsolete Gradle Dependency</td></tr>
-<tr>
 <td class="countColumn">1</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
 <a href="#GradleDynamicVersion">GradleDynamicVersion</a>: Gradle Dynamic Version</td></tr>
 <tr><td class="countColumn"></td><td class="categoryColumn"><a href="#Security">Security</a>
@@ -218,9 +213,6 @@ Check performed at Tue Dec 28 02:40:56 EET 2021      </nav>
 <tr><td class="countColumn"></td><td class="categoryColumn"><a href="#Performance">Performance</a>
 </td></tr>
 <tr>
-<td class="countColumn">16</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
-<a href="#VectorPath">VectorPath</a>: Long vector paths</td></tr>
-<tr>
 <td class="countColumn">1</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
 <a href="#UnusedResources">UnusedResources</a>: Unused resources</td></tr>
 <tr><td class="countColumn"></td><td class="categoryColumn"><a href="#Accessibility">Accessibility</a>
@@ -228,7 +220,7 @@ Check performed at Tue Dec 28 02:40:56 EET 2021      </nav>
 <tr>
 <td class="countColumn">1</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
 <a href="#ContentDescription">ContentDescription</a>: Image without <code>contentDescription</code></td></tr>
-<tr><td></td><td class="categoryColumn"><a href="#MissingIssues">Disabled Checks (38)</a>
+<tr><td></td><td class="categoryColumn"><a href="#MissingIssues">Disabled Checks (37)</a>
 </td></tr></table>
 <br/>              </div>
               <div class="mdl-card__actions mdl-card--border">
@@ -237,61 +229,7 @@ Dismiss</button>            </div>
             </div>
           </section>
 <a name="Correctness"></a>
-<a name="GradleDependency"></a>
-<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" id="GradleDependencyCard" style="display: block;">
-            <div class="mdl-card mdl-cell mdl-cell--12-col">
-  <div class="mdl-card__title">
-    <h2 class="mdl-card__title-text">Obsolete Gradle Dependency</h2>
-  </div>
-              <div class="mdl-card__supporting-text">
-<div class="issue">
-<div class="warningslist">
-<span class="location"><a href="../../build.gradle">../../build.gradle</a>:39</span>: <span class="message">A newer version of androidx.core:core-ktx than 1.6.0 is available: 1.7.0</span><br /><pre class="errorlines">
-<span class="lineno"> 36 </span>
-<span class="lineno"> 37 </span>dependencies {
-<span class="lineno"> 38 </span>
-<span class="caretline"><span class="lineno"> 39 </span>    implementation <span class="warning"><span class="string">'androidx.core:core-ktx:1.6.0'</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 40 </span>    implementation <span class="string">'androidx.appcompat:appcompat:1.3.0'</span>
-<span class="lineno"> 41 </span>    implementation <span class="string">'com.google.android.material:material:1.4.0'</span>
-<span class="lineno"> 42 </span>    implementation <span class="string">'androidx.constraintlayout:constraintlayout:2.1.2'</span></pre>
-
-<span class="location"><a href="../../build.gradle">../../build.gradle</a>:40</span>: <span class="message">A newer version of androidx.appcompat:appcompat than 1.3.0 is available: 1.4.0</span><br /><pre class="errorlines">
-<span class="lineno"> 37 </span>dependencies {
-<span class="lineno"> 38 </span>
-<span class="lineno"> 39 </span>    implementation <span class="string">'androidx.core:core-ktx:1.6.0'</span>
-<span class="caretline"><span class="lineno"> 40 </span>    implementation <span class="warning"><span class="string">'androidx.appcompat:appcompat:1.3.0'</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 41 </span>    implementation <span class="string">'com.google.android.material:material:1.4.0'</span>
-<span class="lineno"> 42 </span>    implementation <span class="string">'androidx.constraintlayout:constraintlayout:2.1.2'</span>
-<span class="lineno"> 43 </span>    testImplementation <span class="string">'junit:junit:4.+'</span></pre>
-
-</div>
-<div class="metadata"><div class="explanation" id="explanationGradleDependency" style="display: none;">
-This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find.<br/>Note: This issue has an associated quickfix operation in Android Studio and IntelliJ IDEA.<br>
-To suppress this error, use the issue id "GradleDependency" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
-<br/></div>
-</div>
-</div>
-<div class="chips">
-<span class="mdl-chip">
-    <span class="mdl-chip__text">GradleDependency</span>
-</span>
-<span class="mdl-chip">
-    <span class="mdl-chip__text">Correctness</span>
-</span>
-<span class="mdl-chip">
-    <span class="mdl-chip__text">Warning</span>
-</span>
-<span class="mdl-chip">
-    <span class="mdl-chip__text">Priority 4/10</span>
-</span>
-</div>
-              </div>
-              <div class="mdl-card__actions mdl-card--border">
-<button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="explanationGradleDependencyLink" onclick="reveal('explanationGradleDependency');">
-Explain</button><button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="GradleDependencyCardLink" onclick="hideid('GradleDependencyCard');">
-Dismiss</button>            </div>
-            </div>
-          </section><a name="GradleDynamicVersion"></a>
+<a name="GradleDynamicVersion"></a>
 <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" id="GradleDynamicVersionCard" style="display: block;">
             <div class="mdl-card mdl-cell mdl-cell--12-col">
   <div class="mdl-card__title">
@@ -301,7 +239,7 @@ Dismiss</button>            </div>
 <div class="issue">
 <div class="warningslist">
 <span class="location"><a href="../../build.gradle">../../build.gradle</a>:43</span>: <span class="message">Avoid using + in version numbers; can lead to unpredictable and unrepeatable builds (junit:junit:4.+)</span><br /><pre class="errorlines">
-<span class="lineno"> 40 </span>    implementation <span class="string">'androidx.appcompat:appcompat:1.3.0'</span>
+<span class="lineno"> 40 </span>    implementation <span class="string">'androidx.appcompat:appcompat:1.4.0'</span>
 <span class="lineno"> 41 </span>    implementation <span class="string">'com.google.android.material:material:1.4.0'</span>
 <span class="lineno"> 42 </span>    implementation <span class="string">'androidx.constraintlayout:constraintlayout:2.1.2'</span>
 <span class="caretline"><span class="lineno"> 43 </span>    testImplementation <span class="warning"><span class="string">'junit:junit:4.+'</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
@@ -347,14 +285,14 @@ Dismiss</button>            </div>
               <div class="mdl-card__supporting-text">
 <div class="issue">
 <div class="warningslist">
-<span class="location"><a href="../../src/main/AndroidManifest.xml">../../src/main/AndroidManifest.xml</a>:5</span>: <span class="message">On SDK version 23 and up, your app data will be automatically backed up and restored on app install. Consider adding the attribute <code>android:fullBackupContent</code> to specify an <code>@xml</code> resource which configures which files to backup. More info: <a href="https://developer.android.com/training/backup/autosyncapi.html">https://developer.android.com/training/backup/autosyncapi.html</a></span><br /><pre class="errorlines">
-<span class="lineno">  2 </span><span class="tag">&lt;manifest</span><span class="attribute"> </span><span class="prefix">xmlns:</span><span class="attribute">android</span>=<span class="value">"http://schemas.android.com/apk/res/android"</span>
+<span class="location"><a href="../../src/main/AndroidManifest.xml">../../src/main/AndroidManifest.xml</a>:6</span>: <span class="message">On SDK version 23 and up, your app data will be automatically backed up and restored on app install. Consider adding the attribute <code>android:fullBackupContent</code> to specify an <code>@xml</code> resource which configures which files to backup, or just set <code>android:fullBackupOnly=true</code>. More info: <a href="https://developer.android.com/guide/topics/data/autobackup">https://developer.android.com/guide/topics/data/autobackup</a></span><br /><pre class="errorlines">
 <span class="lineno">  3 </span>    <span class="attribute">package</span>=<span class="value">"com.example.myapplication"</span>>
 <span class="lineno">  4 </span>
-<span class="caretline"><span class="lineno">  5 </span>    <span class="tag">&lt;</span><span class="warning"><span class="tag">application</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="attribute">
-</span><span class="lineno">  6 </span><span class="attribute">        </span><span class="prefix">android:</span><span class="attribute">allowBackup</span>=<span class="value">"true"</span>
+<span class="lineno">  5 </span>    <span class="tag">&lt;application</span><span class="attribute">
+</span><span class="caretline"><span class="lineno">  6 </span><span class="attribute">        </span><span class="warning"><span class="prefix">android:</span><span class="attribute">allowBackup</span></span>=<span class="value">"true"</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
 <span class="lineno">  7 </span>        <span class="prefix">android:</span><span class="attribute">icon</span>=<span class="value">"@mipmap/ic_launcher"</span>
-<span class="lineno">  8 </span>        <span class="prefix">android:</span><span class="attribute">label</span>=<span class="value">"@string/app_name"</span></pre>
+<span class="lineno">  8 </span>        <span class="prefix">android:</span><span class="attribute">label</span>=<span class="value">"@string/app_name"</span>
+<span class="lineno">  9 </span>        <span class="prefix">android:</span><span class="attribute">roundIcon</span>=<span class="value">"@mipmap/ic_launcher_round"</span></pre>
 
 </div>
 <div class="metadata"><div class="explanation" id="explanationAllowBackup" style="display: none;">
@@ -366,7 +304,7 @@ Allowing backups may have security consequences for an application. Currently <c
 <br/>
 To fix this warning, decide whether your application should support backup, and explicitly set <code>android:allowBackup=(true|false)"</code>.<br/>
 <br/>
-If not set to false, and if targeting API 23 or later, lint will also warn that you should set <code>android:fullBackupContent</code> to configure auto backup.<br/><div class="moreinfo">More info: <ul><li><a href="https://developer.android.com/training/backup/autosyncapi.html">https://developer.android.com/training/backup/autosyncapi.html</a>
+If not set to false, and if targeting API 23 or later, lint will also warn that you should set <code>android:fullBackupContent</code> or <code>android:fullBackupOnly</code> to configure auto backup.<br/><div class="moreinfo">More info: <ul><li><a href="https://developer.android.com/guide/topics/data/autobackup">https://developer.android.com/guide/topics/data/autobackup</a>
 <li><a href="https://developer.android.com/reference/android/R.attr.html#allowBackup">https://developer.android.com/reference/android/R.attr.html#allowBackup</a>
 </ul></div>Note: This issue has an associated quickfix operation in Android Studio and IntelliJ IDEA.<br>
 To suppress this error, use the issue id "AllowBackup" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
@@ -395,203 +333,7 @@ Dismiss</button>            </div>
             </div>
           </section>
 <a name="Performance"></a>
-<a name="VectorPath"></a>
-<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" id="VectorPathCard" style="display: block;">
-            <div class="mdl-card mdl-cell mdl-cell--12-col">
-  <div class="mdl-card__title">
-    <h2 class="mdl-card__title-text">Long vector paths</h2>
-  </div>
-              <div class="mdl-card__supporting-text">
-<div class="issue">
-<div class="warningslist">
-<span class="location"><a href="../../src/main/res/drawable/ic_orc.xml">../../src/main/res/drawable/ic_orc.xml</a>:11</span>: <span class="message">Very long vector path (856 characters), which is bad for performance. Considering reducing precision, removing minor details or rasterizing vector.</span><br /><pre class="errorlines">
-<span class="lineno">   8 </span><span class="attribute">      </span><span class="prefix">android:</span><span class="attribute">pathData</span>=<span class="value">"M255.01,164.56L491.36,217.21L553.37,348.25L658.67,544.82L676.22,588.11L521.78,705.11L471.47,712.13L375.53,723.83L381.96,700.43L369.68,675.86L352.5,697.62L335.95,715.82L323.1,717.72L290.45,721.62L235.02,734.85L213.51,686.87L201.92,682.73L180.41,676.94L164.69,657.91L168,639.71L172.97,627.3L155.59,591.73L145.67,561.11L110.92,525.54L112.57,508.99L116.71,496.58L110.92,485.83L120.85,463.49L139.87,438.67L133.26,420.47L120.85,413.85L110.92,413.85L104.3,405.58L100.16,335.25L104.3,322.84L112.57,295.54L108.44,255L100.16,196.26"</span>
-<span class="lineno">   9 </span>      <span class="prefix">android:</span><span class="attribute">fillColor</span>=<span class="value">"#abb88f"</span>/>
-<span class="lineno">  10 </span>  <span class="tag">&lt;path</span><span class="attribute">
-</span><span class="caretline"><span class="lineno">  11 </span><span class="attribute">      </span><span class="prefix">android:</span><span class="attribute">pathData</span>=<span class="value">"</span><span class="warning"><span class="value">M485.7,535.47C485.15,509.27 482.12,481.41 488.18,456.87C493.7,440.6 498.39,429.29 512.17,427.91C526.79,431.5 536.44,450.8 538.65,466.8C549.96,488.58 556.3,511.2 558.51,532.98C557.68,553.67 550.23,581.8 541.13,615.72L578.36,524.71C585.26,521.95 592.15,516.71 600.7,518.09C610.08,522.23 615.32,528.85 619.73,543.74C618.9,552.56 621.38,552.29 616.42,561.11C627.17,561.11 639.01,594.23 643.97,613.26C657.07,602.43 669.13,593.96 676.58,587.07L590.36,400.2L506.18,286.23C499.14,314.09 493.97,325.19 485.49,340.42C490.25,354.14 492.53,381.31 492.73,387.37C490.18,393.85 488.66,396.82 481.36,396.89C474.67,393.92 463.02,389.51 456.95,382.41L454.26,403.09L469.15,432.05L470.81,469.28L485.7,535.47L485.7,535.47L485.7,535.47L485.7,535.47L485.7,535.47L485.7,535.47L485.7,535.47L485.7,535.47L485.7,535.47L485.7,535.47L485.7,535.47L485.7,535.47L485.7,535.47L485.7,535.47</span></span><span class="value">"</span></span>
-<span class="lineno">  12 </span>      <span class="prefix">android:</span><span class="attribute">fillColor</span>=<span class="value">"#727d56"</span>/>
-<span class="lineno">  13 </span>  <span class="tag">&lt;path</span><span class="attribute">
-</span><span class="lineno">  14 </span><span class="attribute">      </span><span class="prefix">android:</span><span class="attribute">pathData</span>=<span class="value">"M259.63,378.69L303.69,378.07L284.04,397.09L268.11,409.09L235.85,413.85L224.68,408.47L245.77,382.62L259.63,378.69L259.63,378.69"</span></pre>
-
-<span class="location"><a href="../../src/main/res/drawable/ic_orc.xml">../../src/main/res/drawable/ic_orc.xml</a>:17</span>: <span class="message">Very long vector path (1005 characters), which is bad for performance. Considering reducing precision, removing minor details or rasterizing vector.</span><br /><pre class="errorlines">
-<span class="lineno">  14 </span><span class="attribute">      </span><span class="prefix">android:</span><span class="attribute">pathData</span>=<span class="value">"M259.63,378.69L303.69,378.07L284.04,397.09L268.11,409.09L235.85,413.85L224.68,408.47L245.77,382.62L259.63,378.69L259.63,378.69"</span>
-<span class="lineno">  15 </span>      <span class="prefix">android:</span><span class="attribute">fillColor</span>=<span class="value">"#fff"</span>/>
-<span class="lineno">  16 </span>  <span class="tag">&lt;path</span><span class="attribute">
-</span><span class="caretline"><span class="lineno">  17 </span><span class="attribute">      </span><span class="prefix">android:</span><span class="attribute">pathData</span>=<span class="value">"</span><span class="warning"><span class="value">M178.67,210.19C191.15,205.9 201.58,203.95 215.23,205.51C231.22,209.99 235.9,212.58 244.48,222.47L263.5,331.58C259.88,335.74 356.37,358.03 353.89,355.2C343.64,345.18 370.4,336.74 367.49,335.74C356.99,330.84 334.34,320.51 327.05,319.26C310.31,318.41 334.74,303.57 331.75,303.3C295.58,300.04 312.12,293.6 307.9,293.15C301.55,293.36 290.54,293.82 293.77,290.34C298.65,283.51 316.98,281.66 324.63,282.73C316.54,274.83 302.3,268.11 298.89,261.08C295.96,252.5 297.72,244.51 307.67,237.1C317.03,238.27 324.05,250.55 330.48,264.01C358.95,287.22 366.95,296.97 377.28,319L379.04,362.88L423.48,403.33L411.99,379.29L422.84,394.55C415.5,365.79 415.81,348.12 417.73,318.91C425.55,309.85 432.95,302.03 443.66,295.45C388.05,257.29 337.4,205.07 284.26,159.88L109.05,196.44L108.76,254.06C111.49,240.61 113.93,231.83 123.68,223.06C132.75,218.09 148.54,220.72 161.41,227.15C165.7,219.45 170.87,214.97 178.67,210.19L178.67,210.19L178.67,210.19L178.67,210.19L178.67,210.19L178.67,210.19L178.67,210.19L178.67,210.19L178.67,210.19</span></span><span class="value">"</span></span>
-<span class="lineno">  18 </span>      <span class="prefix">android:</span><span class="attribute">fillColor</span>=<span class="value">"#737d57"</span>/>
-<span class="lineno">  19 </span>  <span class="tag">&lt;path</span><span class="attribute">
-</span><span class="lineno">  20 </span><span class="attribute">      </span><span class="prefix">android:</span><span class="attribute">pathData</span>=<span class="value">"M85.95,331.58L102.62,335.96L114.91,340.94L119.29,349.13L131.29,354.98L137.72,367.26L123.1,402.36L112.71,403.83L102.18,398.27L87.12,393L74.25,395.34L75.42,389.49L81.56,386.57L72.78,379.11L81.56,373.11L82.44,349.71L85.95,346.2L85.95,331.58L85.95,331.58"</span></pre>
-
-<span class="location"><a href="../../src/main/res/drawable/ic_orc.xml">../../src/main/res/drawable/ic_orc.xml</a>:23</span>: <span class="message">Very long vector path (1439 characters), which is bad for performance. Considering reducing precision, removing minor details or rasterizing vector.</span><br /><pre class="errorlines">
-<span class="lineno">  20 </span><span class="attribute">      </span><span class="prefix">android:</span><span class="attribute">pathData</span>=<span class="value">"M85.95,331.58L102.62,335.96L114.91,340.94L119.29,349.13L131.29,354.98L137.72,367.26L123.1,402.36L112.71,403.83L102.18,398.27L87.12,393L74.25,395.34L75.42,389.49L81.56,386.57L72.78,379.11L81.56,373.11L82.44,349.71L85.95,346.2L85.95,331.58L85.95,331.58"</span>
-<span class="lineno">  21 </span>      <span class="prefix">android:</span><span class="attribute">fillColor</span>=<span class="value">"#a69973"</span>/>
-<span class="lineno">  22 </span>  <span class="tag">&lt;path</span><span class="attribute">
-</span><span class="caretline"><span class="lineno">  23 </span><span class="attribute">      </span><span class="prefix">android:</span><span class="attribute">pathData</span>=<span class="value">"</span><span class="warning"><span class="value">M110.92,298.02L109.27,264.93L112.57,211.15L129.12,206.19L144.01,216.94L152.29,222.73L160.37,226.68L170.49,202.88L207.72,190.47L240.81,204.53L247.43,226.87L240.81,259.96L243.29,285.61L254.2,304.69L278.14,307.01L279.45,290.48L292.93,276.51L282.18,256.65L298.72,231.01L295.41,212.8L287.14,198.74L301.21,204.53L319.41,231.01L327.68,250.03L363.26,283.13L375.67,302.16L379.8,341.04L382.28,360.07L408.76,374.13L411.24,316.22L417.03,310.43L452.61,272.37L479.08,241.76L483.22,259.96L489.84,264.93L489.84,274.85L503.9,283.13L509.69,288.92L501.23,316.81L489.84,339.39L500.13,373.41L508.91,373.41L520.61,390.37L519.44,376.33L530.55,392.13L539.33,418.45L544.01,444.78L538.16,462.33L548.1,482.8L556.88,497.43L561.56,494.5L568.58,506.2L576.19,500.35L595.49,472.86L595.49,481.63L611.29,501.52L622.99,528.43L615.97,558.85L622.99,555.93L622.99,574.65L634.69,596.88L639.37,586.93L652.24,578.16L666.86,554.76L666.86,523.75L641.71,457.65L637.61,452.38L631.76,407.92L615.97,341.23L586.13,321.92L558.63,265.76L542.84,218.38L539.91,161.63L501.3,107.81L466.2,70.96L462.11,62.18L429.93,53.41L400.68,43.46L386.06,47.56L381.38,40.54L346.28,41.71L336.33,43.46L335.16,37.61L318.78,43.46L291.29,66.28L266.13,82.66L262.03,87.34C262.03,87.34 220.5,92.6 220.5,91.43C220.5,90.26 176.62,96.11 176.62,96.11L156.15,110.15L129.82,123.61L119.88,137.06L80.1,144.08L62.55,160.46L53.77,170.41L52.02,179.18L56.7,199.66L47.92,225.98L42.07,237.68L85.95,286.24L96.48,304.96L103.5,319.58</span></span><span class="value">"</span></span>
-<span class="lineno">  24 </span>      <span class="prefix">android:</span><span class="attribute">fillColor</span>=<span class="value">"#a69973"</span>/>
-<span class="lineno">  25 </span>  <span class="tag">&lt;path</span><span class="attribute">
-</span><span class="lineno">  26 </span><span class="attribute">      </span><span class="prefix">android:</span><span class="attribute">pathData</span>=<span class="value">"M197.79,372.48L211.03,354.69L217.23,348.49L216.4,342.28L261.08,305.88L278.45,307.12L287.97,294.71L297.07,295.54L297.07,298.85L299.14,300.91L307.41,300.09L319.82,307.12L309.48,317.46L321.16,323.67L335.13,322.84L345.88,328.75L354.98,331.94L359.95,336.08L342.57,345.18L276.39,362.96L239.16,384.47L220.54,400.19L212.29,402.99L202.66,402.8L195.72,398.13L194.48,377.44L197.79,372.48L197.79,372.48"</span></pre>
-
-<span class="location"><a href="../../src/main/res/drawable/ic_orc.xml">../../src/main/res/drawable/ic_orc.xml</a>:88</span>: <span class="message">Very long vector path (1175 characters), which is bad for performance. Considering reducing precision, removing minor details or rasterizing vector.</span><br /><pre class="errorlines">
-<span class="lineno">  85 </span><span class="attribute">      </span><span class="prefix">android:</span><span class="attribute">pathData</span>=<span class="value">"M440.46,285.66C437.59,280.64 435.15,278.69 434.03,269.28C426.28,263.23 408.43,257.19 409.46,251.14C400.1,240.86 403.31,238.03 402.44,231.54C396.78,227.25 387.91,215.21 393.95,213.85C392.93,212.77 385.23,207.75 384.89,194.4L348.62,172.75L361.49,192.64L380.79,207.85L388.98,225.4L373.19,213.7L402.44,262.84L424.67,279.07C416.35,287.71 409.8,293.26 401.48,301.91C393.96,305.88 390.48,305.72 376.74,304.2L380.28,355.13L409.44,373.36L411.21,317.25L440.46,285.66L440.46,285.66L440.46,285.66L440.46,285.66L440.46,285.66"</span>
-<span class="lineno">  86 </span>      <span class="prefix">android:</span><span class="attribute">fillColor</span>=<span class="value">"#645038"</span>/>
-<span class="lineno">  87 </span>  <span class="tag">&lt;path</span><span class="attribute">
-</span><span class="caretline"><span class="lineno">  88 </span><span class="attribute">      </span><span class="prefix">android:</span><span class="attribute">pathData</span>=<span class="value">"</span><span class="warning"><span class="value">M481.41,248.8L492.53,251.14L496.04,260.5L498.96,261.67L498.38,271.62L508.91,276.3L508.91,280.39L519.44,290.92C514.56,305.94 503.55,330.61 503.94,337.43C504.13,343.67 516.32,353.13 521.78,357.61L525.87,360.54L535.82,378.09L552.2,426.06L556.01,441.11C561.36,444.27 570.09,443.89 575.6,440.37C577.98,433.79 573.61,414.19 567.65,376.9C570.95,359.18 571.76,350.21 566.94,336.86L537.78,297.52L530.47,289.24L515.64,246.48L515.4,229.79L503.67,200.74L485.31,142.84C479.88,109.48 464.52,79.84 423.1,51.44L459.34,62.63L466.63,70.51L498.32,104.45L540.77,163.62L540.19,200.45L545.41,227.36L558.43,263.71L587.35,320.39L617.16,340.83L632.46,407.12L639.8,457.06L668.36,526.44L668.19,552.51L652.99,577.25L638.24,586.09L636.87,595.34L624.45,572.33L622.2,555.95L617.3,556.36L622.56,524.51L595.56,481.17L593.31,474.07L570.29,507.39L560.97,492.09L553.37,495.09L537.57,462.92L542.25,435.42L537.57,407.34L518.85,373.99L521.19,392.71L507.15,371.07L503.64,375.16L495.45,373.99L489.6,337.14L499.55,320.76L511.25,289.17L501.3,278.64L489.6,274.54L489.6,264.01L483.17,256.99L481.41,248.8L481.41,248.8L481.41,248.8L481.41,248.8L481.41,248.8L481.41,248.8L481.41,248.8L481.41,248.8L481.41,248.8L481.41,248.8</span></span><span class="value">"</span></span>
-<span class="lineno">  89 </span>      <span class="prefix">android:</span><span class="attribute">fillColor</span>=<span class="value">"#645038"</span>/>
-<span class="lineno">  90 </span>  <span class="tag">&lt;path</span><span class="attribute">
-</span><span class="lineno">  91 </span><span class="attribute">      </span><span class="prefix">android:</span><span class="attribute">pathData</span>=<span class="value">"M197.1,396.81C200.51,398.91 203.34,397.93 206.46,395.64C208.51,389.84 210.11,388.42 213.48,384.23C220.25,376.92 228.35,370.92 237.17,364.49C245.8,359.03 254.87,353.13 264.96,348.25L236.88,368.73L216.4,386.28L216.7,391.54C222.84,389.59 228.98,386.47 235.12,382.18C241.7,376.63 246.38,370.92 253.26,365.07C261.55,360.59 271.59,358.88 283.68,352.93C288.55,350.59 292.7,347.96 298.3,345.91C305.13,344.89 311.66,346.64 318.78,345.91C330.43,342.26 346.32,338.31 360.02,335.68L350.96,341.23L320.53,352.93L294.21,354.69L270.81,365.8L240.1,384.09L226.35,396.81L213.48,403.1L202.66,402.95L197.1,399.73L197.1,396.81L197.1,396.81L197.1,396.81L197.1,396.81L197.1,396.81L197.1,396.81L197.1,396.81L197.1,396.81L197.1,396.81L197.1,396.81"</span></pre>
-
-<span class="location"><a href="../../src/main/res/drawable/ic_orc.xml">../../src/main/res/drawable/ic_orc.xml</a>:94</span>: <span class="message">Very long vector path (819 characters), which is bad for performance. Considering reducing precision, removing minor details or rasterizing vector.</span><br /><pre class="errorlines">
-<span class="lineno">  91 </span><span class="attribute">      </span><span class="prefix">android:</span><span class="attribute">pathData</span>=<span class="value">"M197.1,396.81C200.51,398.91 203.34,397.93 206.46,395.64C208.51,389.84 210.11,388.42 213.48,384.23C220.25,376.92 228.35,370.92 237.17,364.49C245.8,359.03 254.87,353.13 264.96,348.25L236.88,368.73L216.4,386.28L216.7,391.54C222.84,389.59 228.98,386.47 235.12,382.18C241.7,376.63 246.38,370.92 253.26,365.07C261.55,360.59 271.59,358.88 283.68,352.93C288.55,350.59 292.7,347.96 298.3,345.91C305.13,344.89 311.66,346.64 318.78,345.91C330.43,342.26 346.32,338.31 360.02,335.68L350.96,341.23L320.53,352.93L294.21,354.69L270.81,365.8L240.1,384.09L226.35,396.81L213.48,403.1L202.66,402.95L197.1,399.73L197.1,396.81L197.1,396.81L197.1,396.81L197.1,396.81L197.1,396.81L197.1,396.81L197.1,396.81L197.1,396.81L197.1,396.81L197.1,396.81"</span>
-<span class="lineno">  92 </span>      <span class="prefix">android:</span><span class="attribute">fillColor</span>=<span class="value">"#645038"</span>/>
-<span class="lineno">  93 </span>  <span class="tag">&lt;path</span><span class="attribute">
-</span><span class="caretline"><span class="lineno">  94 </span><span class="attribute">      </span><span class="prefix">android:</span><span class="attribute">pathData</span>=<span class="value">"</span><span class="warning"><span class="value">M84.19,184.45L109.35,199.08L113.44,207.85L87.12,196.74L81.27,194.98C87.12,198.49 94.43,202 98.82,205.51C100.67,207.27 100.77,209.02 101.74,210.78C96.18,216.53 94.72,221.11 91.21,234.18C90.33,242.56 97.06,250.95 99.99,259.33C99.21,262.26 97.84,263.72 97.65,268.11C97.94,276.98 104.08,285.56 102.91,297.36C100.67,298.33 95.5,293.46 91.8,291.51L103.5,322.51L112.27,297.36L108.76,253.48L114.61,212.53L126.31,208.44L132.75,206.68L145.62,219.55L160.24,225.99L170.19,202.59C170.19,202.59 223.42,194.4 224.59,196.15C225.76,197.91 239.8,200.83 241.56,200.83C236,183.28 215.92,178.41 204.12,176.26C191.73,176.55 181.98,179.77 173.11,185.04C168.33,188.74 166.77,192.45 164.92,196.15L157.32,186.21L156.15,180.36L148.54,190.89L138.01,182.11L148.54,203.76L138.6,199.66L128.07,190.3L84.19,184.45L84.19,184.45L84.19,184.45L84.19,184.45</span></span><span class="value">"</span></span>
-<span class="lineno">  95 </span>      <span class="prefix">android:</span><span class="attribute">fillColor</span>=<span class="value">"#645038"</span>/>
-<span class="lineno">  96 </span>  <span class="tag">&lt;path</span><span class="attribute">
-</span><span class="lineno">  97 </span><span class="attribute">      </span><span class="prefix">android:</span><span class="attribute">pathData</span>=<span class="value">"M57.87,204.93L66.64,245.88L67.81,254.65L75.42,261.67L84.19,282.15L49.09,242.95L41.48,234.18L52.01,219.55L57.87,204.93"</span></pre>
-
-<button class="mdl-button mdl-js-button mdl-button--primary" id="VectorPathDivLink" onclick="reveal('VectorPathDiv');" />+ 11 More Occurrences...</button>
-<div id="VectorPathDiv" style="display: none">
-<span class="location"><a href="../../src/main/res/drawable/ic_orc.xml">../../src/main/res/drawable/ic_orc.xml</a>:100</span>: <span class="message">Very long vector path (849 characters), which is bad for performance. Considering reducing precision, removing minor details or rasterizing vector.</span><br /><pre class="errorlines">
-<span class="lineno">  97 </span><span class="attribute">      </span><span class="prefix">android:</span><span class="attribute">pathData</span>=<span class="value">"M57.87,204.93L66.64,245.88L67.81,254.65L75.42,261.67L84.19,282.15L49.09,242.95L41.48,234.18L52.01,219.55L57.87,204.93"</span>
-<span class="lineno">  98 </span>      <span class="prefix">android:</span><span class="attribute">fillColor</span>=<span class="value">"#645038"</span>/>
-<span class="lineno">  99 </span>  <span class="tag">&lt;path</span><span class="attribute">
-</span><span class="caretline"><span class="lineno"> 100 </span><span class="attribute">      </span><span class="prefix">android:</span><span class="attribute">pathData</span>=<span class="value">"</span><span class="warning"><span class="value">M147.37,124.19C150.08,122.89 153.22,124.03 156.15,123.61C161.57,122.04 166.45,120.26 170.77,116.59C173.14,118.73 175.85,120.09 179.55,120.68C186.2,119.12 192.64,116.78 198.85,113.66C201.62,116.13 205.26,117.17 208.8,117.76C216.43,115.8 221.96,112.71 231.44,110.6C249.38,109.43 271.25,119.42 285.26,117L302.31,106.6C307.9,108.66 318.68,93.35 330.48,87.34C341.29,90.15 359.35,95.57 395.42,91.43C401.44,91.88 411.61,97.7 424.67,100.21C432.86,107.23 447.84,127.15 459.76,140.85C461.52,146.12 462.51,151.79 466.89,158.75C466.13,168.87 475.56,198.49 475.56,198.49L451.68,148.14L439.29,128.29L414.72,106.64L404.19,103.72L321.12,100.21L309.42,109.57L284.61,118.34L262.03,119.51L229.86,119.51L218.74,126.53L202.95,128.29L185.98,128.29L184.23,132.38L173.7,132.38L165.51,132.38L157.9,134.14L139.29,140.48C139.29,140.48 144.86,131.17 147.37,124.19L147.37,124.19</span></span><span class="value">"</span></span>
-<span class="lineno"> 101 </span>      <span class="prefix">android:</span><span class="attribute">fillColor</span>=<span class="value">"#645038"</span>/>
-<span class="lineno"> 102 </span>  <span class="tag">&lt;path</span><span class="attribute">
-</span><span class="lineno"> 103 </span><span class="attribute">      </span><span class="prefix">android:</span><span class="attribute">pathData</span>=<span class="value">"M300.06,200.83L286.02,199.66L294.79,212.53L294.79,223.06L282.51,211.95L278.41,199.08L262.03,162.81L274.03,171.58L271.39,155.79C271.39,155.79 277.93,171.58 284.56,181.23C291.58,190.59 297.33,197.13 300.06,200.83L300.06,200.83"</span></pre>
-
-<span class="location"><a href="../../src/main/res/drawable/ic_orc.xml">../../src/main/res/drawable/ic_orc.xml</a>:140</span>: <span class="message">Very long vector path (1202 characters), which is bad for performance. Considering reducing precision, removing minor details or rasterizing vector.</span><br /><pre class="errorlines">
-<span class="lineno"> 137 </span>      <span class="prefix">android:</span><span class="attribute">pathData</span>=<span class="value">"M153.94,373.73C153.94,375.38 156.84,384.9 156.84,384.9L160.97,381.59L160.97,371.24L156.84,367.52L153.94,373.73"</span>/>
-<span class="lineno"> 138 </span>  <span class="tag">&lt;path</span><span class="attribute">
-</span><span class="lineno"> 139 </span><span class="attribute">      </span><span class="prefix">android:</span><span class="attribute">fillColor</span>=<span class="value">"#FF000000"</span>
-<span class="caretline"><span class="lineno"> 140 </span>      <span class="prefix">android:</span><span class="attribute">pathData</span>=<span class="value">"</span><span class="warning"><span class="value">M147.32,526.37L146.91,568.56C146.91,568.56 158.49,607.45 158.49,608.69C158.49,609.93 175.04,636.82 175.04,636.82L189.52,650.05L235.85,653.36L275.15,647.99L295,637.64L323.96,609.93L338.44,597.63C342.64,594.39 348.44,591.55 354.69,586.35C357.36,583.2 358.86,579.91 360.07,575.59L358.29,556.98L347.95,539.61C343.42,533 339.66,528.72 332.92,524.33C328.3,522.41 324.45,521.48 319.82,520.99C319.1,523.95 318.48,527.35 318.31,530.87C317.67,537.26 318.8,543.77 319.49,550.39L326.42,587.78C327.62,594.73 323.05,598.92 320.38,604.38L330.16,583.04L329.34,574.77L323.13,551.19C321.83,545.4 321.75,540.16 321.89,535.47C322.03,533.13 322.72,530.23 323.96,528.44C326.25,528.66 328.32,528.99 330.16,530.09C333.83,531.97 335.07,533.4 337.2,536.71L346.71,552.84L350.85,560.29L354.16,561.53L356.76,569.61C357.08,572.53 357.25,575.59 355.81,578.08C353.88,581.11 352.97,583.41 348.7,585.86C345.69,587.18 342.1,587.62 338.65,586.88L330.16,583.04L320.38,604.43L311.55,616.96L303.28,626.48L290.91,637.41L275.15,645.29L239.16,650.05L191.59,647.16L177.93,632.68L164.7,608.69L153.53,580.15L148.98,563.18L149.39,538.78L148.15,523.06L147.32,526.37L147.32,526.37L147.32,526.37L147.32,526.37L147.32,526.37L147.32,526.37L147.32,526.37</span></span><span class="value">"</span>/></span>
-<span class="lineno"> 141 </span>  <span class="tag">&lt;path</span><span class="attribute">
-</span><span class="lineno"> 142 </span><span class="attribute">      </span><span class="prefix">android:</span><span class="attribute">fillColor</span>=<span class="value">"#FF000000"</span>
-<span class="lineno"> 143 </span>      <span class="prefix">android:</span><span class="attribute">pathData</span>=<span class="value">"M114.21,501.36C113.04,501.36 107.19,515.99 107.19,515.99L108.36,521.84L105.44,533.54L108.36,546.41L111.29,544.07L114.21,537.63L117.14,545.24L115.97,552.26L118.31,554.01L122.99,546.99L138.78,561.03L147.56,569.81L147.56,549.92L135.86,546.99L121.82,532.37L115.97,523.59L115.97,508.97L118.31,504.29L114.21,501.36L114.21,501.36"</span>/>
-</pre>
-
-<span class="location"><a href="../../src/main/res/drawable/ic_orc.xml">../../src/main/res/drawable/ic_orc.xml</a>:158</span>: <span class="message">Very long vector path (1713 characters), which is bad for performance. Considering reducing precision, removing minor details or rasterizing vector.</span><br /><pre class="errorlines">
-<span class="lineno"> 155 </span>      <span class="prefix">android:</span><span class="attribute">pathData</span>=<span class="value">"M171.54,630.99C165.14,640.43 163.27,654.61 163.81,659.32C164.17,663.45 173.37,673.75 182.66,680.96C187.93,684.2 192.42,685.56 198.94,686.93C213.28,686.85 232.94,685.84 249.93,683.89L291.47,678.04L317.8,659.32L343.54,637.09L373.37,605.3L373.37,594.85L352.9,619.53L318.97,653.47L294.42,672.19L285.04,676.87L237.58,681.58C222,682.44 203.3,682.37 193.19,679.79C178.31,672.67 169.72,662.74 167.75,657.56C167.07,653.04 169.05,640.87 173.7,632.09L172.37,630.17L171.54,630.99L171.54,630.99L171.54,630.99L171.54,630.99L171.54,630.99L171.54,630.99"</span>/>
-<span class="lineno"> 156 </span>  <span class="tag">&lt;path</span><span class="attribute">
-</span><span class="lineno"> 157 </span><span class="attribute">      </span><span class="prefix">android:</span><span class="attribute">fillColor</span>=<span class="value">"#FF000000"</span>
-<span class="caretline"><span class="lineno"> 158 </span>      <span class="prefix">android:</span><span class="attribute">pathData</span>=<span class="value">"</span><span class="warning"><span class="value">M209.57,685.64L218.34,697.34L228.29,733.61L231.21,738.29L257.54,732.44L285.04,725.42L309.02,722.5L316.04,724.84L313.12,720.74L320.14,719.57L330.67,724.84L334.76,724.84L336.52,717.82L339.44,723.67L345.29,719.57L346.46,709.04L351.14,703.19L351.14,707.29L354.07,706.12L354.07,700.27L361.67,694.42L364.01,688.57L377.47,666.92L393.26,652.3L409.64,632.99L425.44,615.44L440.65,603.74L455.27,599.64L443.57,597.89L445.91,596.72L456.44,596.72L462.29,596.72L450.59,592.04L457.61,586.19L466.97,590.87L469.31,593.21L466.39,585.02L461.12,580.34L465.22,571.56L466.39,567.47L473.99,577.41L473.99,570.39L466.97,564.54L471.07,562.79L478.09,565.71L481.01,561.62L476.92,556.94L469.9,549.92L469.9,537.63L475.16,524.76L479.84,527.69L485.69,521.84L476.92,521.84L473.99,513.06L482.77,510.14L471.07,499.61L464.05,483.81L461.12,461L461.12,438.77L465.22,445.79L469.31,459.24L473.99,466.26L471.07,447.54L471.07,431.75L466.39,420.05L459.37,408.35L458.93,392.9L440.06,393.14L450.59,403.67L457.61,418.29L468.14,432.92L469.31,444.62L461.12,429.99L456.44,439.94L458.2,454.56L456.44,466.26L459.37,489.66L466.97,503.12L466.97,511.89L469.31,517.74L463.46,529.44L465.22,546.99L465.22,554.6L462.29,560.45L461.12,564.54L454.69,568.64L456.44,580.92L453.52,585.02L447.67,590.87C447.67,590.87 445.33,592.62 446.5,592.62C447.67,592.62 438.89,596.72 438.89,596.72L440.65,597.89L433.04,602.57L433.04,604.32L416.66,615.44L392.09,642.35L372.79,664L356.99,690.32L344.12,702.61L341.2,706.7L323.65,710.8L331.84,713.72L333.59,714.31L330.67,716.65L317.8,717.23L314.29,718.4L297.32,719.57L282.11,721.33L265.15,727.18L251.69,727.18L245.84,727.18L232.97,723.08L224.19,703.78L235.31,712.55L242.91,718.4L232.97,702.61L227.12,695L215.42,686.23L209.57,685.64L209.57,685.64</span></span><span class="value">"</span>/></span>
-<span class="lineno"> 159 </span>  <span class="tag">&lt;path</span><span class="attribute">
-</span><span class="lineno"> 160 </span><span class="attribute">      </span><span class="prefix">android:</span><span class="attribute">fillColor</span>=<span class="value">"#FF000000"</span>
-<span class="lineno"> 161 </span>      <span class="prefix">android:</span><span class="attribute">pathData</span>=<span class="value">"M159.26,306.55L165.69,309.48L181.49,303.63L196.11,289L210.74,277.3L204.89,277.3L183.24,293.1L172.71,302.46L161.01,303.63L159.26,306.55"</span>/>
-</pre>
-
-<span class="location"><a href="../../src/main/res/drawable/ic_orc.xml">../../src/main/res/drawable/ic_orc.xml</a>:206</span>: <span class="message">Very long vector path (983 characters), which is bad for performance. Considering reducing precision, removing minor details or rasterizing vector.</span><br /><pre class="errorlines">
-<span class="lineno"> 203 </span>      <span class="prefix">android:</span><span class="attribute">pathData</span>=<span class="value">"M110.7,403.67L116.55,406.01L124.74,401.91L110.7,403.67L110.7,403.67"</span>/>
-<span class="lineno"> 204 </span>  <span class="tag">&lt;path</span><span class="attribute">
-</span><span class="lineno"> 205 </span><span class="attribute">      </span><span class="prefix">android:</span><span class="attribute">fillColor</span>=<span class="value">"#FF000000"</span>
-<span class="caretline"><span class="lineno"> 206 </span>      <span class="prefix">android:</span><span class="attribute">pathData</span>=<span class="value">"</span><span class="warning"><span class="value">M416.08,308.31L450.01,273.21L480.43,234.01L484.52,236.94L484.52,252.73L488.03,262.09L495.05,264.43L492.13,270.28L492.13,274.96L507.92,279.06L506.75,283.74L512.6,286.66L513.77,287.83L500.9,320.59L492.13,340.48L498.86,366.81C499.25,373.83 500.51,380.85 500.9,387.87C500.12,392.65 498.76,395.09 496.81,397.82C492.91,401.62 489.01,403.08 483.35,403.67C477.5,403.57 471.65,399.38 465.8,396.65L457.03,393.72L448.25,393.72L464.63,387.87L473.12,393.72C476.43,396.26 479.75,398.21 483.94,399.86C487.06,399.47 489.59,399.08 492.13,397.23C495.15,393.33 496.13,390.6 496.81,386.12L493.3,370.32L490.37,352.77L486.28,341.07L496.22,323.52L503.83,305.38L506.75,295.44L508.51,289.59L503.83,288.42L500.9,286.66L500.9,282.57L495.05,279.64L490.37,277.89L486.28,274.96L489.2,269.11L488.03,266.19L482.18,263.26L480.43,254.49L478.67,246.88L474.58,249.81L465.8,260.34L448.25,280.81L429.53,301.29L421.93,311.23L411.98,318.84L411.98,310.06L416.08,308.31L416.08,308.31L416.08,308.31L416.08,308.31L416.08,308.31</span></span><span class="value">"</span>/></span>
-<span class="lineno"> 207 </span>  <span class="tag">&lt;path</span><span class="attribute">
-</span><span class="lineno"> 208 </span><span class="attribute">      </span><span class="prefix">android:</span><span class="attribute">fillColor</span>=<span class="value">"#FF000000"</span>
-<span class="lineno"> 209 </span>      <span class="prefix">android:</span><span class="attribute">pathData</span>=<span class="value">"M492.13,290.76L492.13,311.23L483.35,337.56L479.26,349.26L479.26,358.04L471.65,360.96L472.82,355.11L475.75,343.41L483.35,322.93L488.03,308.31L492.13,290.76"</span>/>
-</pre>
-
-<span class="location"><a href="../../src/main/res/drawable/ic_orc.xml">../../src/main/res/drawable/ic_orc.xml</a>:218</span>: <span class="message">Very long vector path (878 characters), which is bad for performance. Considering reducing precision, removing minor details or rasterizing vector.</span><br /><pre class="errorlines">
-<span class="lineno"> 215 </span>      <span class="prefix">android:</span><span class="attribute">pathData</span>=<span class="value">"M454.1,327.03L462.88,335.8L467.56,340.48L468.73,336.39L469.9,334.63L464.05,325.86L454.1,320.01L457.03,325.86L454.1,327.03"</span>/>
-<span class="lineno"> 216 </span>  <span class="tag">&lt;path</span><span class="attribute">
-</span><span class="lineno"> 217 </span><span class="attribute">      </span><span class="prefix">android:</span><span class="attribute">fillColor</span>=<span class="value">"#FF000000"</span>
-<span class="caretline"><span class="lineno"> 218 </span>      <span class="prefix">android:</span><span class="attribute">pathData</span>=<span class="value">"</span><span class="warning"><span class="value">M499.73,374.42L506.75,380.27L510.26,406.59L513.19,386.12L508.51,371.49L517.28,391.97L523.13,400.74L527.23,413.61L519.04,379.1L528.98,393.14L537.76,415.37L542.44,434.67L536.59,465.09L556.48,507.21L562.33,506.04L559.99,496.1L567.01,507.21C567.01,507.21 566.43,517.74 568.18,517.74C569.94,517.74 574.03,508.97 574.03,508.97L588.66,482.64L599.19,473.87L594.51,446.37L592.17,422.97L583.39,406.59L578.71,380.27L578.71,358.62C578.71,358.62 570.52,362.72 571.69,362.72C572.86,362.72 574.62,390.21 574.62,390.21L578.71,409.52L586.32,421.22L590.41,457.49L591.58,475.04L584.56,485.57L577.54,495.51L577.54,482.64L581.64,462.17L576.96,465.09L574.03,482.64L574.62,495.51L571.11,504.87L559.99,490.25L555.31,492.59L549.46,477.96L540.68,466.85L545.36,446.37L540.68,416.54L537.76,402.5L523.13,376.17L514.36,361.55L505.58,356.87L517.28,372.66L519.04,386.12L505.58,367.4L504.41,372.66L499.73,374.42</span></span><span class="value">"</span>/></span>
-<span class="lineno"> 219 </span>  <span class="tag">&lt;path</span><span class="attribute">
-</span><span class="lineno"> 220 </span><span class="attribute">      </span><span class="prefix">android:</span><span class="attribute">fillColor</span>=<span class="value">"#FF000000"</span>
-<span class="lineno"> 221 </span>      <span class="prefix">android:</span><span class="attribute">pathData</span>=<span class="value">"M595.09,480.89L609.72,504.29L620.83,527.69L618.49,545.82L613.81,564.54C613.81,564.54 621.42,556.35 621.42,557.52C621.42,558.69 622.59,574.49 622.59,574.49L633.12,596.72L636.04,600.81L640.14,586.77L655.93,579.17L672.31,554.6L669.39,534.12L675.24,536.46L662.37,503.12L651.84,477.96L645.99,456.32L648.91,450.47L640.14,456.32L637.21,438.77L633.12,403.67L622.59,362.72L618.49,338.14L599.19,329.37L574.62,291.34L558.24,260.34L548.29,226.99L543.61,206.52L543.61,173.17L547.71,168.49L523.13,133.39L521.96,139.24L527.23,153.87L538.24,165.63L537.66,201.9L542.44,222.45L546.54,234.01L553.56,250.39L561.16,281.4L568.18,295.44L579.88,316.5L587.49,339.31L599.19,345.16L606.21,361.55L609.13,390.8L622.59,425.9L610.89,382.02L607.96,361.55L603.87,349.85L609.13,351.02L599.19,342.82L589.24,329.37L600.36,336.39L614.98,342.82L622.59,376.17L631.36,411.27L634.29,445.79L638.97,459.24L645.99,473.87L653.59,500.19L658.86,518.91L661.78,542.31L663.54,525.35L666.46,533.54L663.54,554.01L656.52,570.39L647.16,580.92L637.21,586.19L637.21,593.79L625.51,573.32L623.76,556.94L621.42,554.6L618.49,555.77L624.34,533.54L622.59,524.76L616.74,511.89L612.64,493.17L603.28,478.55L607.96,491.42L595.09,480.89L595.09,480.89"</span>/>
-</pre>
-
-<span class="location"><a href="../../src/main/res/drawable/ic_orc.xml">../../src/main/res/drawable/ic_orc.xml</a>:221</span>: <span class="message">Very long vector path (1183 characters), which is bad for performance. Considering reducing precision, removing minor details or rasterizing vector.</span><br /><pre class="errorlines">
-<span class="lineno"> 218 </span>      <span class="prefix">android:</span><span class="attribute">pathData</span>=<span class="value">"M499.73,374.42L506.75,380.27L510.26,406.59L513.19,386.12L508.51,371.49L517.28,391.97L523.13,400.74L527.23,413.61L519.04,379.1L528.98,393.14L537.76,415.37L542.44,434.67L536.59,465.09L556.48,507.21L562.33,506.04L559.99,496.1L567.01,507.21C567.01,507.21 566.43,517.74 568.18,517.74C569.94,517.74 574.03,508.97 574.03,508.97L588.66,482.64L599.19,473.87L594.51,446.37L592.17,422.97L583.39,406.59L578.71,380.27L578.71,358.62C578.71,358.62 570.52,362.72 571.69,362.72C572.86,362.72 574.62,390.21 574.62,390.21L578.71,409.52L586.32,421.22L590.41,457.49L591.58,475.04L584.56,485.57L577.54,495.51L577.54,482.64L581.64,462.17L576.96,465.09L574.03,482.64L574.62,495.51L571.11,504.87L559.99,490.25L555.31,492.59L549.46,477.96L540.68,466.85L545.36,446.37L540.68,416.54L537.76,402.5L523.13,376.17L514.36,361.55L505.58,356.87L517.28,372.66L519.04,386.12L505.58,367.4L504.41,372.66L499.73,374.42"</span>/>
-<span class="lineno"> 219 </span>  <span class="tag">&lt;path</span><span class="attribute">
-</span><span class="lineno"> 220 </span><span class="attribute">      </span><span class="prefix">android:</span><span class="attribute">fillColor</span>=<span class="value">"#FF000000"</span>
-<span class="caretline"><span class="lineno"> 221 </span>      <span class="prefix">android:</span><span class="attribute">pathData</span>=<span class="value">"</span><span class="warning"><span class="value">M595.09,480.89L609.72,504.29L620.83,527.69L618.49,545.82L613.81,564.54C613.81,564.54 621.42,556.35 621.42,557.52C621.42,558.69 622.59,574.49 622.59,574.49L633.12,596.72L636.04,600.81L640.14,586.77L655.93,579.17L672.31,554.6L669.39,534.12L675.24,536.46L662.37,503.12L651.84,477.96L645.99,456.32L648.91,450.47L640.14,456.32L637.21,438.77L633.12,403.67L622.59,362.72L618.49,338.14L599.19,329.37L574.62,291.34L558.24,260.34L548.29,226.99L543.61,206.52L543.61,173.17L547.71,168.49L523.13,133.39L521.96,139.24L527.23,153.87L538.24,165.63L537.66,201.9L542.44,222.45L546.54,234.01L553.56,250.39L561.16,281.4L568.18,295.44L579.88,316.5L587.49,339.31L599.19,345.16L606.21,361.55L609.13,390.8L622.59,425.9L610.89,382.02L607.96,361.55L603.87,349.85L609.13,351.02L599.19,342.82L589.24,329.37L600.36,336.39L614.98,342.82L622.59,376.17L631.36,411.27L634.29,445.79L638.97,459.24L645.99,473.87L653.59,500.19L658.86,518.91L661.78,542.31L663.54,525.35L666.46,533.54L663.54,554.01L656.52,570.39L647.16,580.92L637.21,586.19L637.21,593.79L625.51,573.32L623.76,556.94L621.42,554.6L618.49,555.77L624.34,533.54L622.59,524.76L616.74,511.89L612.64,493.17L603.28,478.55L607.96,491.42L595.09,480.89L595.09,480.89</span></span><span class="value">"</span>/></span>
-<span class="lineno"> 222 </span>  <span class="tag">&lt;path</span><span class="attribute">
-</span><span class="lineno"> 223 </span><span class="attribute">      </span><span class="prefix">android:</span><span class="attribute">fillColor</span>=<span class="value">"#FF000000"</span>
-<span class="lineno"> 224 </span>      <span class="prefix">android:</span><span class="attribute">pathData</span>=<span class="value">"M481.01,136.9L496.81,152.7L509.68,179.02L496.81,160.3L503.83,183.12L506.03,193.36L517.28,204.83L512.29,204.21L507.34,201.25L509.68,214.12L517.28,226.99L524.89,237.52L533.08,244.54L524.89,243.37L521.38,241.62L537.76,262.09L531.91,258L516.11,243.37L521.38,258L530.15,273.79L540.68,287.25L524.89,272.62C524.89,272.62 531.32,290.17 533.08,290.17C534.83,290.17 549.46,305.97 549.46,305.97L565.26,316.5L567.01,320.59L546.54,307.72L562.33,323.52L571.11,329.37L558.24,324.1L574.03,345.75L578.71,348.68L554.14,328.2L545.36,315.33L533.08,304.8L536,297.78L527.81,293.1L527.81,287.25L519.04,265.6L508.51,246.3L499.73,227.58L499.73,221.73L513.19,243.37L513.19,230.5L501.49,211.2L498.56,193.65L490.96,170.25L489.79,155.62L481.01,136.9L481.01,136.9"</span>/>
-</pre>
-
-<span class="location"><a href="../../src/main/res/drawable/ic_orc.xml">../../src/main/res/drawable/ic_orc.xml</a>:227</span>: <span class="message">Very long vector path (1682 characters), which is bad for performance. Considering reducing precision, removing minor details or rasterizing vector.</span><br /><pre class="errorlines">
-<span class="lineno"> 224 </span>      <span class="prefix">android:</span><span class="attribute">pathData</span>=<span class="value">"M481.01,136.9L496.81,152.7L509.68,179.02L496.81,160.3L503.83,183.12L506.03,193.36L517.28,204.83L512.29,204.21L507.34,201.25L509.68,214.12L517.28,226.99L524.89,237.52L533.08,244.54L524.89,243.37L521.38,241.62L537.76,262.09L531.91,258L516.11,243.37L521.38,258L530.15,273.79L540.68,287.25L524.89,272.62C524.89,272.62 531.32,290.17 533.08,290.17C534.83,290.17 549.46,305.97 549.46,305.97L565.26,316.5L567.01,320.59L546.54,307.72L562.33,323.52L571.11,329.37L558.24,324.1L574.03,345.75L578.71,348.68L554.14,328.2L545.36,315.33L533.08,304.8L536,297.78L527.81,293.1L527.81,287.25L519.04,265.6L508.51,246.3L499.73,227.58L499.73,221.73L513.19,243.37L513.19,230.5L501.49,211.2L498.56,193.65L490.96,170.25L489.79,155.62L481.01,136.9L481.01,136.9"</span>/>
-<span class="lineno"> 225 </span>  <span class="tag">&lt;path</span><span class="attribute">
-</span><span class="lineno"> 226 </span><span class="attribute">      </span><span class="prefix">android:</span><span class="attribute">fillColor</span>=<span class="value">"#FF000000"</span>
-<span class="caretline"><span class="lineno"> 227 </span>      <span class="prefix">android:</span><span class="attribute">pathData</span>=<span class="value">"</span><span class="warning"><span class="value">M331.84,167.91L344.12,172L352.31,170.83L386.24,195.4L374.54,192.48L349.97,174.93C349.97,174.93 365.77,189.55 365.77,191.31C370.45,198.91 386.24,208.86 386.24,208.86L392.09,213.54L383.32,213.54L396.19,230.5L399.7,238.11L375.71,217.05L389.17,238.11L402.04,246.88L408.47,249.81L395.02,246.88L400.87,255.66L417.25,272.04L427.19,280.23L422.51,289L412.57,302.46L413.74,318.25L411.4,350.43L412.57,372.66L418.42,394.31L405.55,374.42L407.89,384.36L418.42,401.91L402.62,386.12L386.24,371.49L389.17,366.81L383.32,362.72L380.39,367.98L374.54,358.04L377.47,349.26L374.54,334.63L372.79,328.78L374.54,301.29L355.24,276.13L352.31,273.21L352.31,276.13L337.69,263.26L329.5,257.41L329.5,262.68L323.65,254.49L320.72,241.03L314.29,227.58L307.27,216.46L303.17,217.63L300.25,208.86L294.4,201.84C294.4,201.84 292.64,202.42 292.64,204.18C292.64,205.93 285.62,201.84 285.62,201.84L282.7,194.23L276.85,185.46L276.85,178.44L289.72,195.4L301.42,201.25L306.1,210.03L313.12,217.63L316.04,221.73L318.97,217.63L323.65,234.01L325.99,245.13L335.93,252.15L351.14,267.36L365.77,280.23L374.54,293.68L378.64,307.14L379.22,318.84L379.22,322.93L381.56,311.23L381.56,302.46L383.32,315.33L382.15,332.88L382.15,349.26C382.15,349.26 385.07,353.36 386.24,353.36C387.41,353.36 389.17,351.02 389.17,351.02L402.04,365.06L406.72,367.98L407.89,353.94L403.79,355.11L409.64,322.93L409.64,308.31L412.57,296.61L419.59,286.66L423.1,281.98L412.57,272.04L415.49,277.89L419.59,280.23L404.96,268.53L396.77,260.34L382.15,250.98L365.77,239.28L359.92,232.26L373.37,242.2L392.09,252.73L396.19,253.9L388,241.03L375.71,223.48L366.94,207.1L383.32,218.8L376.3,208.86L365.77,198.91L354.07,186.63L356.99,186.63L342.37,176.68L331.84,167.91L331.84,167.91</span></span><span class="value">"</span>/></span>
-<span class="lineno"> 228 </span>  <span class="tag">&lt;path</span><span class="attribute">
-</span><span class="lineno"> 229 </span><span class="attribute">      </span><span class="prefix">android:</span><span class="attribute">fillColor</span>=<span class="value">"#FF000000"</span>
-<span class="lineno"> 230 </span>      <span class="prefix">android:</span><span class="attribute">pathData</span>=<span class="value">"M159.84,229.33L169.79,208.86L181.49,203.01L200.21,198.91L209.57,198.91L202.55,203.01L187.92,207.1L204.89,204.76L218.34,201.84L227.12,201.84L237.06,208.86L242.91,221.73L242.91,239.28L239.99,250.98L237.65,265.6L237.65,279.06L238.82,264.43L240.57,273.21C240.57,273.21 240.57,284.32 240.57,286.08C240.57,287.83 242.91,299.53 242.91,299.53L242.91,289.59L250.52,303.63L263.39,314.16C263.39,314.16 270.41,316.5 272.17,318.25C273.92,320.01 283.87,325.86 283.87,325.86L285.62,322.93L282.7,314.16L285.62,311.23C285.62,311.23 289.72,315.33 289.72,314.16C289.72,312.99 285.62,303.63 285.62,302.46C285.62,301.29 282.7,296.61 282.7,296.61L279.77,291.93L286.79,286.66L292.64,280.81L297.32,277.3C297.32,277.3 305.51,277.3 304.34,277.3C303.17,277.3 294.4,270.28 294.4,270.28L285.62,260.34L290.3,246.88L292.64,241.03L297.32,235.18L300.25,229.33L297.32,222.31C297.32,222.31 296.15,216.46 297.32,216.46C298.49,216.46 306.1,226.41 306.1,226.41L303.17,219.39L294.4,208.86L290.3,204.76L284.45,198.91L276.85,184.29L276.85,175.51L272.75,157.96L269.83,153.28L272.75,164.98L275.09,179.61L275.09,184.29L269.83,172.59L259.29,157.96L268.07,173.76L275.09,186.63L283.87,200.08L282.7,211.78L286.79,205.93L292.64,211.78L294.4,222.31L290.3,229.33L295.57,229.33L293.23,236.35L283.87,249.81L275.68,267.36L273.92,279.06L276.85,289L278.02,279.06L282.7,261.51C282.7,261.51 286.79,266.19 286.79,267.36C286.79,268.53 286.79,274.38 286.79,274.38L285.62,281.98L278.6,290.76L276.85,305.38L268.07,304.21L263.97,295.44L259.29,287.83L256.37,274.96L256.37,284.91L262.22,293.68L263.39,302.46L255.2,302.46L249.35,293.68L243.5,280.81L241.74,266.19L247.14,248.64L251.24,233.43L250.51,218.52L240.86,198.91C240.86,198.91 228.97,189.55 227.41,188.38C225.84,187.21 215.42,183.7 215.42,183.7L200.79,182.53L187.92,183.7L174.47,192.48L169.79,198.33L182.07,190.14L192.02,185.46C192.02,185.46 200.21,185.46 201.96,185.46C203.72,185.46 210.74,188.38 209.57,188.38C208.4,188.38 193.77,191.31 193.77,191.31L180.32,195.4L170.37,198.33L164.52,205.93L161.6,215.88L159.84,229.33L159.84,229.33L159.84,229.33"</span>/>
-</pre>
-
-<span class="location"><a href="../../src/main/res/drawable/ic_orc.xml">../../src/main/res/drawable/ic_orc.xml</a>:230</span>: <span class="message">Very long vector path (2037 characters), which is bad for performance. Considering reducing precision, removing minor details or rasterizing vector.</span><br /><pre class="errorlines">
-<span class="lineno"> 227 </span>      <span class="prefix">android:</span><span class="attribute">pathData</span>=<span class="value">"M331.84,167.91L344.12,172L352.31,170.83L386.24,195.4L374.54,192.48L349.97,174.93C349.97,174.93 365.77,189.55 365.77,191.31C370.45,198.91 386.24,208.86 386.24,208.86L392.09,213.54L383.32,213.54L396.19,230.5L399.7,238.11L375.71,217.05L389.17,238.11L402.04,246.88L408.47,249.81L395.02,246.88L400.87,255.66L417.25,272.04L427.19,280.23L422.51,289L412.57,302.46L413.74,318.25L411.4,350.43L412.57,372.66L418.42,394.31L405.55,374.42L407.89,384.36L418.42,401.91L402.62,386.12L386.24,371.49L389.17,366.81L383.32,362.72L380.39,367.98L374.54,358.04L377.47,349.26L374.54,334.63L372.79,328.78L374.54,301.29L355.24,276.13L352.31,273.21L352.31,276.13L337.69,263.26L329.5,257.41L329.5,262.68L323.65,254.49L320.72,241.03L314.29,227.58L307.27,216.46L303.17,217.63L300.25,208.86L294.4,201.84C294.4,201.84 292.64,202.42 292.64,204.18C292.64,205.93 285.62,201.84 285.62,201.84L282.7,194.23L276.85,185.46L276.85,178.44L289.72,195.4L301.42,201.25L306.1,210.03L313.12,217.63L316.04,221.73L318.97,217.63L323.65,234.01L325.99,245.13L335.93,252.15L351.14,267.36L365.77,280.23L374.54,293.68L378.64,307.14L379.22,318.84L379.22,322.93L381.56,311.23L381.56,302.46L383.32,315.33L382.15,332.88L382.15,349.26C382.15,349.26 385.07,353.36 386.24,353.36C387.41,353.36 389.17,351.02 389.17,351.02L402.04,365.06L406.72,367.98L407.89,353.94L403.79,355.11L409.64,322.93L409.64,308.31L412.57,296.61L419.59,286.66L423.1,281.98L412.57,272.04L415.49,277.89L419.59,280.23L404.96,268.53L396.77,260.34L382.15,250.98L365.77,239.28L359.92,232.26L373.37,242.2L392.09,252.73L396.19,253.9L388,241.03L375.71,223.48L366.94,207.1L383.32,218.8L376.3,208.86L365.77,198.91L354.07,186.63L356.99,186.63L342.37,176.68L331.84,167.91L331.84,167.91"</span>/>
-<span class="lineno"> 228 </span>  <span class="tag">&lt;path</span><span class="attribute">
-</span><span class="lineno"> 229 </span><span class="attribute">      </span><span class="prefix">android:</span><span class="attribute">fillColor</span>=<span class="value">"#FF000000"</span>
-<span class="caretline"><span class="lineno"> 230 </span>      <span class="prefix">android:</span><span class="attribute">pathData</span>=<span class="value">"</span><span class="warning"><span class="value">M159.84,229.33L169.79,208.86L181.49,203.01L200.21,198.91L209.57,198.91L202.55,203.01L187.92,207.1L204.89,204.76L218.34,201.84L227.12,201.84L237.06,208.86L242.91,221.73L242.91,239.28L239.99,250.98L237.65,265.6L237.65,279.06L238.82,264.43L240.57,273.21C240.57,273.21 240.57,284.32 240.57,286.08C240.57,287.83 242.91,299.53 242.91,299.53L242.91,289.59L250.52,303.63L263.39,314.16C263.39,314.16 270.41,316.5 272.17,318.25C273.92,320.01 283.87,325.86 283.87,325.86L285.62,322.93L282.7,314.16L285.62,311.23C285.62,311.23 289.72,315.33 289.72,314.16C289.72,312.99 285.62,303.63 285.62,302.46C285.62,301.29 282.7,296.61 282.7,296.61L279.77,291.93L286.79,286.66L292.64,280.81L297.32,277.3C297.32,277.3 305.51,277.3 304.34,277.3C303.17,277.3 294.4,270.28 294.4,270.28L285.62,260.34L290.3,246.88L292.64,241.03L297.32,235.18L300.25,229.33L297.32,222.31C297.32,222.31 296.15,216.46 297.32,216.46C298.49,216.46 306.1,226.41 306.1,226.41L303.17,219.39L294.4,208.86L290.3,204.76L284.45,198.91L276.85,184.29L276.85,175.51L272.75,157.96L269.83,153.28L272.75,164.98L275.09,179.61L275.09,184.29L269.83,172.59L259.29,157.96L268.07,173.76L275.09,186.63L283.87,200.08L282.7,211.78L286.79,205.93L292.64,211.78L294.4,222.31L290.3,229.33L295.57,229.33L293.23,236.35L283.87,249.81L275.68,267.36L273.92,279.06L276.85,289L278.02,279.06L282.7,261.51C282.7,261.51 286.79,266.19 286.79,267.36C286.79,268.53 286.79,274.38 286.79,274.38L285.62,281.98L278.6,290.76L276.85,305.38L268.07,304.21L263.97,295.44L259.29,287.83L256.37,274.96L256.37,284.91L262.22,293.68L263.39,302.46L255.2,302.46L249.35,293.68L243.5,280.81L241.74,266.19L247.14,248.64L251.24,233.43L250.51,218.52L240.86,198.91C240.86,198.91 228.97,189.55 227.41,188.38C225.84,187.21 215.42,183.7 215.42,183.7L200.79,182.53L187.92,183.7L174.47,192.48L169.79,198.33L182.07,190.14L192.02,185.46C192.02,185.46 200.21,185.46 201.96,185.46C203.72,185.46 210.74,188.38 209.57,188.38C208.4,188.38 193.77,191.31 193.77,191.31L180.32,195.4L170.37,198.33L164.52,205.93L161.6,215.88L159.84,229.33L159.84,229.33L159.84,229.33</span></span><span class="value">"</span>/></span>
-<span class="lineno"> 231 </span>  <span class="tag">&lt;path</span><span class="attribute">
-</span><span class="lineno"> 232 </span><span class="attribute">      </span><span class="prefix">android:</span><span class="attribute">fillColor</span>=<span class="value">"#FF000000"</span>
-<span class="lineno"> 233 </span>      <span class="prefix">android:</span><span class="attribute">pathData</span>=<span class="value">"M509.14,347.41L526.07,361.2L535.47,380.01L544.88,405.09L556.16,443.97L553.03,425.16L543.62,395.69L532.96,369.36L520.42,351.8L509.14,347.41"</span>/>
-</pre>
-
-<span class="location"><a href="../../src/main/res/drawable/ic_orc.xml">../../src/main/res/drawable/ic_orc.xml</a>:248</span>: <span class="message">Very long vector path (904 characters), which is bad for performance. Considering reducing precision, removing minor details or rasterizing vector.</span><br /><pre class="errorlines">
-<span class="lineno"> 245 </span>      <span class="prefix">android:</span><span class="attribute">pathData</span>=<span class="value">"M56.44,190.66L52.68,176.87L57.7,167.46L70.24,156.18L87.17,143.64L104.72,140.5L120.4,139.25L123.53,134.23L112.87,135.49L101.59,129.84L107.86,137.37L99.71,137.37L89.05,135.49L81.52,129.22L80.9,132.35L89.05,137.37L96.57,139.25L87.79,140.5L78.39,141.76L75.25,137.37L73.37,137.37L74.63,142.38L80.9,143.64L77.76,146.77L70.24,148.65L62.09,145.52L59.58,143.64L59.58,146.77L65.22,151.16L70.24,151.79L62.71,157.43L55.82,166.84L48.29,173.11L52.68,173.11L51.43,179.38L51.43,182.51L43.9,174.99L48.29,184.39L55.82,195.05L56.44,190.66"</span>/>
-<span class="lineno"> 246 </span>  <span class="tag">&lt;path</span><span class="attribute">
-</span><span class="lineno"> 247 </span><span class="attribute">      </span><span class="prefix">android:</span><span class="attribute">fillColor</span>=<span class="value">"#FF000000"</span>
-<span class="caretline"><span class="lineno"> 248 </span>      <span class="prefix">android:</span><span class="attribute">pathData</span>=<span class="value">"</span><span class="warning"><span class="value">M167,168.77L158.58,176.31L156.36,186.06L156.36,191.83L160.8,190.94L161.68,197.15L162.57,203.8L158.58,194.93L157.25,206.02L155.03,210.45L155.03,200.69L155.03,193.16L151.93,199.36L151.93,207.35L146.16,199.81L136.41,186.06L125.33,169.66L128.43,165.23L130.65,157.69L135.08,143.06L132.86,136.41L140.4,134.19L141.73,131.98L142.17,138.18L159.47,131.98L164.79,126.65L170.55,131.98L183.85,131.09L184.74,125.32L195.82,128.43L220.2,125.32L210.45,125.32L207.35,120.89L217.1,121.78L231.29,118.67L230.4,116.46L243.7,118.67L258.33,116.46L275.62,118.67L264.98,121.78L255.67,119.56L238.38,120.89L232.62,120.89L219.32,127.54L207.35,130.64L190.5,131.09L181.63,134.19C181.63,134.19 175.87,134.19 174.98,134.19C174.1,134.19 164.79,132.86 164.79,132.86L157.25,137.3L148.38,140.84L140.84,142.17L138.63,149.71L132.86,164.34L131.09,170.1L140.84,185.18L148.38,197.15L152.81,193.16L152.81,183.85L158.14,174.09L167,168.77L167,168.77</span></span><span class="value">"</span>/></span>
-<span class="lineno"> 249 </span>  <span class="tag">&lt;path</span><span class="attribute">
-</span><span class="lineno"> 250 </span><span class="attribute">      </span><span class="prefix">android:</span><span class="attribute">fillColor</span>=<span class="value">"#FF000000"</span>
-<span class="lineno"> 251 </span>      <span class="prefix">android:</span><span class="attribute">pathData</span>=<span class="value">"M120.89,132.42L135.29,112.97L134.34,120.45L145.34,112.79L156.57,108.12L168.39,97.96L177.2,88.08L174.98,93.85L173.27,98.34L178.59,93.91L187.4,91.78L202.29,88.26L214.74,85.07L210.95,89.41L226.92,87.2L242.99,85.96L252.63,83.32L261.44,84.98L264.89,78.48L279.5,71.83L297.79,53.94L296.02,57.05L292.47,62.81L302.23,55.33L319.07,41.53L330.01,37.33L339.91,35.53L355.43,36.21L357.64,37.1L355.87,38.43L338.14,40.64L342.95,42.03L361.19,38.43L383.36,39.31L390.9,43.75L403.35,37.98L409.96,39.76L404.64,42.86L415.72,42.86L418.83,45.96L436.56,53.94L456.51,58.38L468.48,63.7L470.7,72.57L483.5,83.95L500.58,92.81L503.27,99.85L490.21,92.07L489.56,94.17L499.96,103.6L508.83,115.13L520.8,124.88L527.74,134.52L522.87,138.71L505.37,118.08L488.14,98.28L482.79,90.24L472.68,80.4L464.7,72.92L461.54,65.71L454.39,63.99L434.56,63.9L445.05,60.09L441.59,58.73L431.24,57.19L415.72,50.6L408.81,47.15L397.4,47L387.56,48.86L379.37,48.48L383.66,44.52L380.76,43.54L359.57,42.65L340.5,46.26L326.17,45.08L334.41,41.94L334.77,40.58L323.95,43.75L318.19,47.29L310.95,53.44L299.06,64.38L289.19,70.73L279.61,81.28L282.87,73.19L275.33,79.42L267.73,84.42L263.53,91.33L255.97,88.76L234.04,91.89L210.6,92.81L194.2,95.91L177.2,99.17L171.44,104.04L168.33,112.47L167,114.68L167,104.04L161.68,110.25L146.55,118.08L137.3,122.61L133.75,128.28L128.43,127.1L124.88,135.08L118.23,138.18L120.89,132.42L120.89,132.42L120.89,132.42L120.89,132.42L120.89,132.42L120.89,132.42"</span>/>
-</pre>
-
-<span class="location"><a href="../../src/main/res/drawable/ic_orc.xml">../../src/main/res/drawable/ic_orc.xml</a>:251</span>: <span class="message">Very long vector path (1414 characters), which is bad for performance. Considering reducing precision, removing minor details or rasterizing vector.</span><br /><pre class="errorlines">
-<span class="lineno"> 248 </span>      <span class="prefix">android:</span><span class="attribute">pathData</span>=<span class="value">"M167,168.77L158.58,176.31L156.36,186.06L156.36,191.83L160.8,190.94L161.68,197.15L162.57,203.8L158.58,194.93L157.25,206.02L155.03,210.45L155.03,200.69L155.03,193.16L151.93,199.36L151.93,207.35L146.16,199.81L136.41,186.06L125.33,169.66L128.43,165.23L130.65,157.69L135.08,143.06L132.86,136.41L140.4,134.19L141.73,131.98L142.17,138.18L159.47,131.98L164.79,126.65L170.55,131.98L183.85,131.09L184.74,125.32L195.82,128.43L220.2,125.32L210.45,125.32L207.35,120.89L217.1,121.78L231.29,118.67L230.4,116.46L243.7,118.67L258.33,116.46L275.62,118.67L264.98,121.78L255.67,119.56L238.38,120.89L232.62,120.89L219.32,127.54L207.35,130.64L190.5,131.09L181.63,134.19C181.63,134.19 175.87,134.19 174.98,134.19C174.1,134.19 164.79,132.86 164.79,132.86L157.25,137.3L148.38,140.84L140.84,142.17L138.63,149.71L132.86,164.34L131.09,170.1L140.84,185.18L148.38,197.15L152.81,193.16L152.81,183.85L158.14,174.09L167,168.77L167,168.77"</span>/>
-<span class="lineno"> 249 </span>  <span class="tag">&lt;path</span><span class="attribute">
-</span><span class="lineno"> 250 </span><span class="attribute">      </span><span class="prefix">android:</span><span class="attribute">fillColor</span>=<span class="value">"#FF000000"</span>
-<span class="caretline"><span class="lineno"> 251 </span>      <span class="prefix">android:</span><span class="attribute">pathData</span>=<span class="value">"</span><span class="warning"><span class="value">M120.89,132.42L135.29,112.97L134.34,120.45L145.34,112.79L156.57,108.12L168.39,97.96L177.2,88.08L174.98,93.85L173.27,98.34L178.59,93.91L187.4,91.78L202.29,88.26L214.74,85.07L210.95,89.41L226.92,87.2L242.99,85.96L252.63,83.32L261.44,84.98L264.89,78.48L279.5,71.83L297.79,53.94L296.02,57.05L292.47,62.81L302.23,55.33L319.07,41.53L330.01,37.33L339.91,35.53L355.43,36.21L357.64,37.1L355.87,38.43L338.14,40.64L342.95,42.03L361.19,38.43L383.36,39.31L390.9,43.75L403.35,37.98L409.96,39.76L404.64,42.86L415.72,42.86L418.83,45.96L436.56,53.94L456.51,58.38L468.48,63.7L470.7,72.57L483.5,83.95L500.58,92.81L503.27,99.85L490.21,92.07L489.56,94.17L499.96,103.6L508.83,115.13L520.8,124.88L527.74,134.52L522.87,138.71L505.37,118.08L488.14,98.28L482.79,90.24L472.68,80.4L464.7,72.92L461.54,65.71L454.39,63.99L434.56,63.9L445.05,60.09L441.59,58.73L431.24,57.19L415.72,50.6L408.81,47.15L397.4,47L387.56,48.86L379.37,48.48L383.66,44.52L380.76,43.54L359.57,42.65L340.5,46.26L326.17,45.08L334.41,41.94L334.77,40.58L323.95,43.75L318.19,47.29L310.95,53.44L299.06,64.38L289.19,70.73L279.61,81.28L282.87,73.19L275.33,79.42L267.73,84.42L263.53,91.33L255.97,88.76L234.04,91.89L210.6,92.81L194.2,95.91L177.2,99.17L171.44,104.04L168.33,112.47L167,114.68L167,104.04L161.68,110.25L146.55,118.08L137.3,122.61L133.75,128.28L128.43,127.1L124.88,135.08L118.23,138.18L120.89,132.42L120.89,132.42L120.89,132.42L120.89,132.42L120.89,132.42L120.89,132.42</span></span><span class="value">"</span>/></span>
-<span class="lineno"> 252 </span>  <span class="tag">&lt;path</span><span class="attribute">
-</span><span class="lineno"> 253 </span><span class="attribute">      </span><span class="prefix">android:</span><span class="attribute">fillColor</span>=<span class="value">"#FF000000"</span>
-<span class="lineno"> 254 </span>      <span class="prefix">android:</span><span class="attribute">pathData</span>=<span class="value">"M295.86,116.13L300.83,110.28L301.71,105.9L303.17,110.28L310.48,105.9L318.95,97.96L323.9,94.16L324.52,98.58L330.37,99.17L352.9,98.58C352.9,98.58 362.26,100.05 366.64,98.58C371.03,97.12 371.71,96.1 377.91,94.03L373.17,100.63L384.57,100.05L408.47,102.09L424.29,102.36C424.29,102.36 424.85,105.67 423.98,105.67C423.1,105.67 420.63,105.75 417.27,106.09L423.62,109.21L429.53,112L435.68,119.67L440.4,124.81L447.67,133.68L451.76,144.51L457.32,156.5L460.25,161.47C460.25,161.47 455.27,157.38 455.27,156.5C455.27,155.62 451.76,151.23 451.76,151.23L452.35,157.08L449.42,154.16L448.18,148.31L443.79,136.02L438.6,129.88L433.34,124.32L417.83,111.75L412.86,109.7L405.55,105.9L398.23,105.9L380.1,104.43L371.32,105.31L360.79,103.75L346.17,103.56L330.37,102.39C330.37,102.39 326.57,102.39 326.57,102.39L320.47,104.69L314.72,113.32L314.15,107.4L311.36,109.41L305.51,113.21L295.86,116.13L295.86,116.13L295.86,116.13L295.86,116.13L295.86,116.13L295.86,116.13L295.86,116.13L295.86,116.13"</span>/>
-</pre>
-
-<span class="location"><a href="../../src/main/res/drawable/ic_orc.xml">../../src/main/res/drawable/ic_orc.xml</a>:254</span>: <span class="message">Very long vector path (965 characters), which is bad for performance. Considering reducing precision, removing minor details or rasterizing vector.</span><br /><pre class="errorlines">
-<span class="lineno"> 251 </span>      <span class="prefix">android:</span><span class="attribute">pathData</span>=<span class="value">"M120.89,132.42L135.29,112.97L134.34,120.45L145.34,112.79L156.57,108.12L168.39,97.96L177.2,88.08L174.98,93.85L173.27,98.34L178.59,93.91L187.4,91.78L202.29,88.26L214.74,85.07L210.95,89.41L226.92,87.2L242.99,85.96L252.63,83.32L261.44,84.98L264.89,78.48L279.5,71.83L297.79,53.94L296.02,57.05L292.47,62.81L302.23,55.33L319.07,41.53L330.01,37.33L339.91,35.53L355.43,36.21L357.64,37.1L355.87,38.43L338.14,40.64L342.95,42.03L361.19,38.43L383.36,39.31L390.9,43.75L403.35,37.98L409.96,39.76L404.64,42.86L415.72,42.86L418.83,45.96L436.56,53.94L456.51,58.38L468.48,63.7L470.7,72.57L483.5,83.95L500.58,92.81L503.27,99.85L490.21,92.07L489.56,94.17L499.96,103.6L508.83,115.13L520.8,124.88L527.74,134.52L522.87,138.71L505.37,118.08L488.14,98.28L482.79,90.24L472.68,80.4L464.7,72.92L461.54,65.71L454.39,63.99L434.56,63.9L445.05,60.09L441.59,58.73L431.24,57.19L415.72,50.6L408.81,47.15L397.4,47L387.56,48.86L379.37,48.48L383.66,44.52L380.76,43.54L359.57,42.65L340.5,46.26L326.17,45.08L334.41,41.94L334.77,40.58L323.95,43.75L318.19,47.29L310.95,53.44L299.06,64.38L289.19,70.73L279.61,81.28L282.87,73.19L275.33,79.42L267.73,84.42L263.53,91.33L255.97,88.76L234.04,91.89L210.6,92.81L194.2,95.91L177.2,99.17L171.44,104.04L168.33,112.47L167,114.68L167,104.04L161.68,110.25L146.55,118.08L137.3,122.61L133.75,128.28L128.43,127.1L124.88,135.08L118.23,138.18L120.89,132.42L120.89,132.42L120.89,132.42L120.89,132.42L120.89,132.42L120.89,132.42"</span>/>
-<span class="lineno"> 252 </span>  <span class="tag">&lt;path</span><span class="attribute">
-</span><span class="lineno"> 253 </span><span class="attribute">      </span><span class="prefix">android:</span><span class="attribute">fillColor</span>=<span class="value">"#FF000000"</span>
-<span class="caretline"><span class="lineno"> 254 </span>      <span class="prefix">android:</span><span class="attribute">pathData</span>=<span class="value">"</span><span class="warning"><span class="value">M295.86,116.13L300.83,110.28L301.71,105.9L303.17,110.28L310.48,105.9L318.95,97.96L323.9,94.16L324.52,98.58L330.37,99.17L352.9,98.58C352.9,98.58 362.26,100.05 366.64,98.58C371.03,97.12 371.71,96.1 377.91,94.03L373.17,100.63L384.57,100.05L408.47,102.09L424.29,102.36C424.29,102.36 424.85,105.67 423.98,105.67C423.1,105.67 420.63,105.75 417.27,106.09L423.62,109.21L429.53,112L435.68,119.67L440.4,124.81L447.67,133.68L451.76,144.51L457.32,156.5L460.25,161.47C460.25,161.47 455.27,157.38 455.27,156.5C455.27,155.62 451.76,151.23 451.76,151.23L452.35,157.08L449.42,154.16L448.18,148.31L443.79,136.02L438.6,129.88L433.34,124.32L417.83,111.75L412.86,109.7L405.55,105.9L398.23,105.9L380.1,104.43L371.32,105.31L360.79,103.75L346.17,103.56L330.37,102.39C330.37,102.39 326.57,102.39 326.57,102.39L320.47,104.69L314.72,113.32L314.15,107.4L311.36,109.41L305.51,113.21L295.86,116.13L295.86,116.13L295.86,116.13L295.86,116.13L295.86,116.13L295.86,116.13L295.86,116.13L295.86,116.13</span></span><span class="value">"</span>/></span>
-<span class="lineno"> 255 </span>  <span class="tag">&lt;path</span><span class="attribute">
-</span><span class="lineno"> 256 </span><span class="attribute">      </span><span class="prefix">android:</span><span class="attribute">fillColor</span>=<span class="value">"#FF000000"</span>
-<span class="lineno"> 257 </span>      <span class="prefix">android:</span><span class="attribute">pathData</span>=<span class="value">"M359.81,575.6C360.48,567.44 361.96,565.22 368,562.02L359.01,543.36C359.6,552.24 358.49,558.12 353.52,556.17L359.37,577.81L359.37,577.81L359.37,577.81L359.81,575.6L359.81,575.6"</span>/>
-</pre>
-
-</div>
-</div>
-<div class="metadata"><div class="explanation" id="explanationVectorPath" style="display: none;">
-Using long vector paths is bad for performance. There are several ways to make the <code>pathData</code> shorter:<br/>
-* Using less precision<br/>
-* Removing some minor details<br/>
-* Using the Android Studio vector conversion tool<br/>
-* Rasterizing the image (converting to PNG)<br/>To suppress this error, use the issue id "VectorPath" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
-<br/></div>
-</div>
-</div>
-<div class="chips">
-<span class="mdl-chip">
-    <span class="mdl-chip__text">VectorPath</span>
-</span>
-<span class="mdl-chip">
-    <span class="mdl-chip__text">Performance</span>
-</span>
-<span class="mdl-chip">
-    <span class="mdl-chip__text">Warning</span>
-</span>
-<span class="mdl-chip">
-    <span class="mdl-chip__text">Priority 5/10</span>
-</span>
-</div>
-              </div>
-              <div class="mdl-card__actions mdl-card--border">
-<button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="explanationVectorPathLink" onclick="reveal('explanationVectorPath');">
-Explain</button><button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="VectorPathCardLink" onclick="hideid('VectorPathCard');">
-Dismiss</button>            </div>
-            </div>
-          </section><a name="UnusedResources"></a>
+<a name="UnusedResources"></a>
 <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" id="UnusedResourcesCard" style="display: block;">
             <div class="mdl-card mdl-cell mdl-cell--12-col">
   <div class="mdl-card__title">
@@ -702,48 +444,12 @@ because the check is not enabled by default, or because
 it was disabled with a command line flag or via one or
 more <code>lint.xml</code> configuration files in the project directories.
 <div id="SuppressedIssues" style="display: none;"><br/><br/><div class="issue">
-<div class="id">AppLinksAutoVerifyError<div class="issueSeparator"></div>
+<div class="id">AppLinksAutoVerify<div class="issueSeparator"></div>
 </div>
 <div class="metadata">Disabled By: Default<br/>
 <div class="explanation">
 Ensures that app links are correctly set and associated with website.<br/><div class="moreinfo">More info: <a href="https://g.co/appindexing/applinks">https://g.co/appindexing/applinks</a>
-</div>To suppress this error, use the issue id "AppLinksAutoVerifyError" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
-<br/></div>
-</div>
-</div>
-<div class="issue">
-<div class="id">AppLinksAutoVerifyWarning<div class="issueSeparator"></div>
-</div>
-<div class="metadata">Disabled By: Default<br/>
-<div class="explanation">
-Ensures that app links are correctly set and associated with website.<br/><div class="moreinfo">More info: <a href="https://g.co/appindexing/applinks">https://g.co/appindexing/applinks</a>
-</div>To suppress this error, use the issue id "AppLinksAutoVerifyWarning" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
-<br/></div>
-</div>
-</div>
-<div class="issue">
-<div class="id">Assert<div class="issueSeparator"></div>
-</div>
-<div class="metadata">Disabled By: Default<br/>
-<div class="explanation">
-Assertions will never be turned on in Android. (It was possible to enable it in Dalvik with <code>adb shell setprop debug.assert 1</code>, but it is not implemented in ART, the runtime for Android 5.0 and later.)<br/>
-<br/>
-This means that the assertion will never catch mistakes, and you should not use assertions from Java or Kotlin for debug build checking.<br/>
-<br/>
-Instead, perform conditional checking inside <code>if (BuildConfig.DEBUG) { }</code> blocks. That constant is a static final boolean which will be true only in debug builds, and false in release builds, and the compiler will completely remove all code inside the <code>if</code>-body from the app.<br/>
-<br/>
-For example, you can replace
-<pre>
-    assert(speed > 0, { "Message" })    // Kotlin
-    assert speed > 0 : "Message"        // Java
-</pre>
-with
-<pre>
-    if (BuildConfig.DEBUG &amp;&amp; !(speed > 0)) {
-        throw new AssertionError("Message")
-    }
-</pre>
-(Note: This lint check does not flag assertions purely asserting nullness or non-nullness in Java code; these are typically more intended for tools usage than runtime checks.)<br/>To suppress this error, use the issue id "Assert" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>To suppress this error, use the issue id "AppLinksAutoVerify" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
 <br/></div>
 </div>
 </div>
@@ -767,7 +473,7 @@ This check is not very sophisticated (it just looks for buttons with the label "
 <div class="explanation">
 The WebP format is typically more compact than PNG and JPEG. As of Android 4.2.1 it supports transparency and lossless conversion as well. Note that there is a quickfix in the IDE which lets you perform conversion.<br/>
 <br/>
-Launcher icons must be in the PNG format.<br/>Note: This issue has an associated quickfix operation in Android Studio and IntelliJ IDEA.<br>
+Previously, launcher icons were required to be in the PNG format but that restriction is no longer there, so lint now flags these.<br/>Note: This issue has an associated quickfix operation in Android Studio and IntelliJ IDEA.<br>
 To suppress this error, use the issue id "ConvertToWebp" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
 <br/></div>
 </div>
@@ -839,41 +545,8 @@ inline fun assert(condition: () -> Boolean) {
     }
 }
 </pre>
-<br/>To suppress this error, use the issue id "ExpensiveAssertion" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
-<br/></div>
-</div>
-</div>
-<div class="issue">
-<div class="id">FieldGetter<div class="issueSeparator"></div>
-</div>
-<div class="metadata">Disabled By: Default<br/>
-<div class="explanation">
-Accessing a field within the class that defines a getter for that field is at least 3 times faster than calling the getter. For simple getters that do nothing other than return the field, you might want to just reference the local field directly instead.<br/>
-<br/>
-<b>NOTE</b>: As of Android 2.3 (Gingerbread), this optimization is performed automatically by Dalvik, so there is no need to change your code; this is only relevant if you are targeting older versions of Android.<br/><div class="moreinfo">More info: <a href="https://developer.android.com/training/articles/perf-tips#internal_get_set">https://developer.android.com/training/articles/perf-tips#internal_get_set</a>
-</div>To suppress this error, use the issue id "FieldGetter" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
-<br/></div>
-</div>
-</div>
-<div class="issue">
-<div class="id">GoogleAppIndexingApiWarning<div class="issueSeparator"></div>
-</div>
-<div class="metadata">Disabled By: Default<br/>
-<div class="explanation">
-Adds URLs to get your app into the Google index, to get installs and traffic to your app from Google Search.<br/><div class="moreinfo">More info: <a href="https://g.co/AppIndexing/AndroidStudio">https://g.co/AppIndexing/AndroidStudio</a>
-</div>Note: This issue has an associated quickfix operation in Android Studio and IntelliJ IDEA.<br>
-To suppress this error, use the issue id "GoogleAppIndexingApiWarning" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
-<br/></div>
-</div>
-</div>
-<div class="issue">
-<div class="id">GoogleAppIndexingWarning<div class="issueSeparator"></div>
-</div>
-<div class="metadata">Disabled By: Default<br/>
-<div class="explanation">
-Adds URLs to get your app into the Google index, to get installs and traffic to your app from Google Search.<br/><div class="moreinfo">More info: <a href="https://g.co/AppIndexing/AndroidStudio">https://g.co/AppIndexing/AndroidStudio</a>
-</div>Note: This issue has an associated quickfix operation in Android Studio and IntelliJ IDEA.<br>
-To suppress this error, use the issue id "GoogleAppIndexingWarning" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+<br/>Note: This issue has an associated quickfix operation in Android Studio and IntelliJ IDEA.<br>
+To suppress this error, use the issue id "ExpensiveAssertion" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
 <br/></div>
 </div>
 </div>
@@ -892,7 +565,8 @@ There are predefined sizes (for each density) for launcher icons. You should fol
 </div>
 <div class="metadata">Disabled By: Default<br/>
 <div class="explanation">
-Kotlin's support for SAM (single accessor method) interfaces lets you pass a lambda to the interface. This will create a new instance on the fly even though there is no explicit constructor call. If you pass one of these lambdas or method references into a method which (for example) stores or compares the object identity, unexpected results may happen.<br/>To suppress this error, use the issue id "ImplicitSamInstance" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+Kotlin's support for SAM (single accessor method) interfaces lets you pass a lambda to the interface. This will create a new instance on the fly even though there is no explicit constructor call. If you pass one of these lambdas or method references into a method which (for example) stores or compares the object identity, unexpected results may happen.<br/>Note: This issue has an associated quickfix operation in Android Studio and IntelliJ IDEA.<br>
+To suppress this error, use the issue id "ImplicitSamInstance" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
 <br/></div>
 </div>
 </div>
@@ -916,7 +590,7 @@ This check scans through library jars and looks for references to API packages t
 <div class="explanation">
 For a method to be represented as a property in Kotlin, strict &#8220;bean&#8221;-style prefixing must be used.<br/>
 <br/>
-Accessor methods require a &#8216;get&#8217; prefix or for boolean-returning methods an &#8216;is&#8217; prefix can be used.<br/><div class="moreinfo">More info: <a href="https://android.github.io/kotlin-guides/interop.html#property-prefixes">https://android.github.io/kotlin-guides/interop.html#property-prefixes</a>
+Accessor methods require a <code>get</code> prefix or for boolean-returning methods an <code>is</code> prefix can be used.<br/><div class="moreinfo">More info: <a href="https://android.github.io/kotlin-guides/interop.html#property-prefixes">https://android.github.io/kotlin-guides/interop.html#property-prefixes</a>
 </div>To suppress this error, use the issue id "KotlinPropertyAccess" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
 <br/></div>
 </div>
@@ -929,6 +603,18 @@ Accessor methods require a &#8216;get&#8217; prefix or for boolean-returning met
 To improve calling this code from Kotlin,<br/>
 parameter types eligible for SAM conversion should be last.<br/><div class="moreinfo">More info: <a href="https://android.github.io/kotlin-guides/interop.html#lambda-parameters-last">https://android.github.io/kotlin-guides/interop.html#lambda-parameters-last</a>
 </div>To suppress this error, use the issue id "LambdaLast" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+<br/></div>
+</div>
+</div>
+<div class="issue">
+<div class="id">LintDocExample<div class="issueSeparator"></div>
+</div>
+<div class="metadata">Disabled By: Default<br/>
+<div class="explanation">
+Lint's tool for generating documentation for each issue has special support for including a code example which shows how to trigger the report. It will pick the first unit test it can find and pick out the source file referenced from the error message, but you can instead designate a unit test to be the documentation example, and in that case, all the files are included.<br/>
+<br/>
+To designate a unit test as the documentation example for an issue, name the test <code>testDocumentationExample</code>, or if your detector reports multiple issues, <code>testDocumentationExample</code>&lt;Id>, such as<br/>
+<code>testDocumentationExampleMyId</code>.<br/>To suppress this error, use the issue id "LintDocExample" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
 <br/></div>
 </div>
 </div>
@@ -971,6 +657,15 @@ On Windows, line endings are typically recorded as carriage return plus newline:
 <br/>
 This detector looks for invalid line endings with repeated carriage return characters (without newlines). Previous versions of the ADT plugin could accidentally introduce these into the file, and when editing the file, the editor could produce confusing visual artifacts.<br/><div class="moreinfo">More info: <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=375421">https://bugs.eclipse.org/bugs/show_bug.cgi?id=375421</a>
 </div>To suppress this error, use the issue id "MangledCRLF" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+<br/></div>
+</div>
+</div>
+<div class="issue">
+<div class="id">MediaCapabilities<div class="issueSeparator"></div>
+</div>
+<div class="metadata">Disabled By: Default<br/>
+<div class="explanation">
+In Android 12 and higher, an app that opens media files should explicitly specify media formats that it doesn't support, so the OS can provide a transcoded file instead.<br/>To suppress this error, use the issue id "MediaCapabilities" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
 <br/></div>
 </div>
 </div>
@@ -1061,7 +756,7 @@ It's possible to specify these widths via styles as well. GridLayout, as a speci
 <div class="explanation">
 If a <code>&lt;TextView></code> is used to display data, the user might want to copy that data and paste it elsewhere. To allow this, the <code>&lt;TextView></code> should specify <code>android:textIsSelectable="true"</code>.<br/>
 <br/>
-This lint check looks for TextViews which are likely to be displaying data: views whose text is set dynamically. This value will be ignored on platforms older than API 11, so it is okay to set it regardless of your <code>minSdkVersion</code>.<br/>Note: This issue has an associated quickfix operation in Android Studio and IntelliJ IDEA.<br>
+This lint check looks for TextViews which are likely to be displaying data: views whose text is set dynamically.<br/>Note: This issue has an associated quickfix operation in Android Studio and IntelliJ IDEA.<br>
 To suppress this error, use the issue id "SelectableText" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
 <br/></div>
 </div>
@@ -1083,7 +778,8 @@ To suppress this error, use the issue id "StopShip" as explained in the <a href=
 </div>
 <div class="metadata">Disabled By: Default<br/>
 <div class="explanation">
-A private inner class which is accessed from the outer class will force the compiler to insert a synthetic accessor; this means that you are causing extra overhead. This is not important in small projects, but is important for large apps running up against the 64K method handle limit, and especially for <b>libraries</b> where you want to make sure your library is as small as possible for the cases where your library is used in an app running up against the 64K limit.<br/>To suppress this error, use the issue id "SyntheticAccessor" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+A private inner class which is accessed from the outer class will force the compiler to insert a synthetic accessor; this means that you are causing extra overhead. This is not important in small projects, but is important for large apps running up against the 64K method handle limit, and especially for <b>libraries</b> where you want to make sure your library is as small as possible for the cases where your library is used in an app running up against the 64K limit.<br/>Note: This issue has an associated quickfix operation in Android Studio and IntelliJ IDEA.<br>
+To suppress this error, use the issue id "SyntheticAccessor" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
 <br/></div>
 </div>
 </div>
@@ -1110,11 +806,14 @@ To suppress this error, use the issue id "TypographyQuotes" as explained in the 
 To improve referencing this code from Kotlin, consider adding<br/>
 explicit nullness information here with either <code>@NonNull</code> or <code>@Nullable</code>.<br/>
 <br/>
-You can set the environment variable<br/>
-    <code>ANDROID_LINT_NULLNESS_IGNORE_DEPRECATED=true</code><br/>
+You can set the environment variable
+<pre>
+    `ANDROID_LINT_NULLNESS_IGNORE_DEPRECATED=true`
+</pre>
 if you want lint to ignore classes and members that have been annotated with<br/>
 <code>@Deprecated</code>.<br/><div class="moreinfo">More info: <a href="https://android.github.io/kotlin-guides/interop.html#nullability-annotations">https://android.github.io/kotlin-guides/interop.html#nullability-annotations</a>
-</div>To suppress this error, use the issue id "UnknownNullness" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>Note: This issue has an associated quickfix operation in Android Studio and IntelliJ IDEA.<br>
+To suppress this error, use the issue id "UnknownNullness" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
 <br/></div>
 </div>
 </div>
@@ -1160,7 +859,29 @@ To suppress this error, use the issue id "UnusedIds" as explained in the <a href
 </div>
 <div class="metadata">Disabled By: Default<br/>
 <div class="explanation">
-Ensures that an actions XML file is properly formed<br/>To suppress this error, use the issue id "ValidActionsXml" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+Ensures that an actions XML file is properly formed<br/>Note: This issue has an associated quickfix operation in Android Studio and IntelliJ IDEA.<br>
+To suppress this error, use the issue id "ValidActionsXml" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+<br/></div>
+</div>
+</div>
+<div class="issue">
+<div class="id">VectorDrawableCompat<div class="issueSeparator"></div>
+</div>
+<div class="metadata">Disabled By: Default<br/>
+<div class="explanation">
+To use VectorDrawableCompat, you need to make two modifications to your project. First, set <code>android.defaultConfig.vectorDrawables.useSupportLibrary = true</code> in your <code>build.gradle</code> file, and second, use <code>app:srcCompat</code> instead of <code>android:src</code> to refer to vector drawables.<br/><div class="moreinfo">More info: <ul><li><a href="https://developer.android.com/guide/topics/graphics/vector-drawable-resources">https://developer.android.com/guide/topics/graphics/vector-drawable-resources</a>
+<li><a href="https://medium.com/androiddevelopers/using-vector-assets-in-android-apps-4318fd662eb9">https://medium.com/androiddevelopers/using-vector-assets-in-android-apps-4318fd662eb9</a>
+</ul></div>To suppress this error, use the issue id "VectorDrawableCompat" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+<br/></div>
+</div>
+</div>
+<div class="issue">
+<div class="id">VulnerableCordovaVersion<div class="issueSeparator"></div>
+</div>
+<div class="metadata">Disabled By: Default<br/>
+<div class="explanation">
+The version of Cordova used in the app is vulnerable to security issues. Please update to the latest Apache Cordova version.<br/><div class="moreinfo">More info: <a href="https://cordova.apache.org/announcements/2015/11/20/security.html">https://cordova.apache.org/announcements/2015/11/20/security.html</a>
+</div>To suppress this error, use the issue id "VulnerableCordovaVersion" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
 <br/></div>
 </div>
 </div>
